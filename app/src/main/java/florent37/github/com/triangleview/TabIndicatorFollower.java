@@ -10,8 +10,11 @@ public class TabIndicatorFollower {
     private View indicatorView;
     private ViewPager viewPager;
 
-    public static TabIndicatorFollower createFrom(ListenableTabLayout tabLayout, View indicatorView){
+    public static TabIndicatorFollower setupWith(ListenableTabLayout tabLayout, View indicatorView){
         return new TabIndicatorFollower().setTabLayout(tabLayout).setIndicatorView(indicatorView);
+    }
+
+    public TabIndicatorFollower() {
     }
 
     public TabIndicatorFollower setTabLayout(ListenableTabLayout listenableTabLayout){
