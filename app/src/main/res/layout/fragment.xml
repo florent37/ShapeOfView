@@ -274,6 +274,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingBottom="20dp"
             android:gravity="center"
             android:shadowColor="@android:color/black"
             android:shadowDx="2"
@@ -281,6 +282,14 @@
             android:textSize="11sp"
             android:textColor="@android:color/white"
             android:textStyle="bold"  />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:checked="true"
+            android:textColor="@android:color/white"
+            android:text="Work with all views"/>
 
     </com.github.florent37.shapeofview.shapes.CutCornerView>
 
