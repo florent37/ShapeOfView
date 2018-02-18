@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="florent37.github.com.triangleview.MainActivity">
+
+
+    <com.github.florent37.shapeofview.ShapeOfView
+        android:id="@+id/heart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:clip_drawable="@drawable/ic_favorite_heart_button"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/arc">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Heart\nCustom SVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"  />
+
+    </com.github.florent37.shapeofview.ShapeOfView>
+
+    <com.github.florent37.shapeofview.ShapeOfView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:clip_drawable="@drawable/ic_android_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/arc">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Droid\nCustom SVG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </com.github.florent37.shapeofview.ShapeOfView>
+
+    <com.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/circle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:circle_borderColor="@android:color/black"
+        app:circle_borderWidth="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/roundRect">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"  />
+
+    </com.github.florent37.shapeofview.shapes.CircleView>
+
+    <com.github.florent37.shapeofview.shapes.DiagonalView
+        android:id="@+id/diagonal"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:diagonal_angle="10"
+        app:diagonal_direction="left"
+        app:diagonal_position="bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/circle">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Diagonal"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />>
+
+    </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/arc"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:arc_cropDirection="outside"
+        app:arc_height="20dp"
+        app:arc_position="bottom"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/triangle">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Arc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"  />
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <com.github.florent37.shapeofview.shapes.TriangleView
+        android:id="@+id/triangle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:arc_cropDirection="outside"
+        app:arc_height="20dp"
+        app:arc_position="bottom"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/clipCorner"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </com.github.florent37.shapeofview.shapes.TriangleView>
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/roundRect"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        app:roundRect_bottomLeftDiameter="10dp"
+        app:roundRect_bottomRightDiameter="10dp"
+        app:roundRect_topLeftDiameter="10dp"
+        app:roundRect_topRightDiameter="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="RoundRect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"  />
+
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+    <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:id="@+id/clipCorner"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:cutCorner_bottomRightSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/otter" />
+
+        <TextView
+            android:text="Cut Corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"  />
+
+    </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</android.support.constraint.ConstraintLayout>
