@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:text="Droid\nCustom SVG"
@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:text="Circle"
@@ -104,6 +104,7 @@
             android:shadowDx="2"
             android:shadowRadius="10"
             android:textSize="11sp"
+            android:paddingTop="25dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"  />
 
@@ -127,13 +128,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Diagonal"
+            android:paddingTop="25dp"
             android:textColor="@android:color/white"
             android:textStyle="bold" />>
 
@@ -157,7 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:text="Arc"
@@ -167,6 +169,7 @@
             android:gravity="center"
             android:shadowColor="@android:color/black"
             android:shadowDx="2"
+            android:paddingTop="25dp"
             android:shadowRadius="10"
             android:textSize="11sp"
             android:textColor="@android:color/white"
@@ -193,7 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:text="Triangle"
@@ -205,6 +208,7 @@
             android:shadowDx="2"
             android:shadowRadius="10"
             android:textSize="11sp"
+            android:paddingTop="25dp"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
@@ -229,7 +233,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@drawable/shape_of_view" />
 
         <TextView
             android:text="RoundRect"
@@ -241,6 +245,7 @@
             android:shadowDx="2"
             android:shadowRadius="10"
             android:textSize="11sp"
+            android:paddingTop="25dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"  />
 
@@ -262,7 +267,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
+            android:src="@color/colorPrimary" />
 
         <TextView
             android:text="Cut Corner"
