@@ -47,7 +47,8 @@ public class TriangleView extends ShapeOfView {
 
                 path.moveTo(0, percentLeft * height);
                 path.lineTo(percentBottom * width, height);
-                path.lineTo(getWidth(), percentRight * height);
+                path.lineTo(width, percentRight * height);
+                path.close();
 
                 return path;
             }

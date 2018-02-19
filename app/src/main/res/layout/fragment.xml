@@ -185,9 +185,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
-        app:arc_cropDirection="outside"
-        app:arc_height="20dp"
-        app:arc_position="bottom"
+        app:triangle_percentBottom="0.5"
+        app:triangle_percentLeft="0"
+        app:triangle_percentRight="0"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/clipCorner"
         >
