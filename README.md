@@ -16,6 +16,8 @@ You can use custom shape to cut your view
 
 # Using Drawable (no elevation)
 
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/custom.png)](https://www.github.com/florent37/ShapeOfView)
+
 ```xml
 <com.github.florent37.shapeofview.ShapeOfView
         android:layout_width="100dp"
