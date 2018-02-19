@@ -4,7 +4,7 @@ You can cut any view
 
 WORK IN PROGRESS
 
-[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/main.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/main_small.png)](https://www.github.com/florent37/ShapeOfView)
 
 <a href="https://goo.gl/WXW8Dc">
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
