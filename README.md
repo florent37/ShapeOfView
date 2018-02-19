@@ -1,14 +1,24 @@
 # ShapeOfView
 
-You can cut any view
-
-WORK IN PROGRESS
+Give a custom shape to any android view
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/main_small.png)](https://www.github.com/florent37/ShapeOfView)
 
 <a href="https://goo.gl/WXW8Dc">
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
+
+# Download
+
+<a href='https://ko-fi.com/A160LCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+[ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/_latestVersion)
+```java
+dependencies {
+    compile 'com.github.florent37:shapeofview:1.0.0'
+}
+```
+
 
 # Create you own shape
 
