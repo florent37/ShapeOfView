@@ -14,6 +14,12 @@ Give a custom shape to any android view
 
 [ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/_latestVersion)
 ```java
+repositories {
+    maven {
+        url  "https://dl.bintray.com/florent37/maven"
+    }
+}
+
 dependencies {
     compile 'com.github.florent37:shapeofview:1.0.0'
 }
