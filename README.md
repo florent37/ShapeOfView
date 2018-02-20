@@ -19,6 +19,11 @@ dependencies {
 }
 ```
 
+# Sample
+
+What you can do with Shape Of View :
+
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/tabs.gif)](https://www.github.com/florent37/ShapeOfView)
 
 # Create you own shape
 
