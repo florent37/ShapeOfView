@@ -8,15 +8,18 @@
     tools:context="florent37.github.com.triangleview.MainActivity">
 
 
-    <com.github.florent37.shapeofview.ShapeOfView
+    <com.github.florent37.shapeofview.shapes.BubbleView
         android:id="@+id/heart"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:clip_drawable="@drawable/ic_favorite_heart_button"
+        android:elevation="6dp"
+        app:bubble_arrowHeight="10dp"
+        app:bubble_arrowWidth="10dp"
+        app:bubble_arrowPosition="bottom"
+        app:bubble_borderRadius="20dp"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/arc">
 
@@ -28,7 +31,7 @@
             android:src="@drawable/otter" />
 
         <TextView
-            android:text="Heart\nCustom SVG"
+            android:text="Bubble"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -40,7 +43,7 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"  />
 
-    </com.github.florent37.shapeofview.ShapeOfView>
+    </com.github.florent37.shapeofview.shapes.BubbleView>
 
     <com.github.florent37.shapeofview.ShapeOfView
         android:layout_width="150dp"

@@ -38,6 +38,17 @@
             <enum name="outside" value="2"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="BubbleView">
+        <attr name="bubble_borderRadius" format="dimension"/>
+        <attr name="bubble_arrowHeight" format="dimension"/>
+        <attr name="bubble_arrowWidth" format="dimension"/>
+        <attr name="bubble_arrowPosition" format="enum">
+            <enum name="bottom" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="4"/>
+        </attr>
+    </declare-styleable>
     <declare-styleable name="RoundRectView">
         <attr name="roundRect_topLeftDiameter" format="dimension"/>
         <attr name="roundRect_topRightDiameter" format="dimension"/>

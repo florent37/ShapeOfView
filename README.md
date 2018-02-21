@@ -205,6 +205,26 @@ ShapesOfView came with pre-created shapes :
 </com.github.florent37.shapeofview.shapes.DiagonalView>
 ```
 
+## Bubble
+
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/bubble.png)](https://www.github.com/florent37/ShapeOfView)
+
+```xml
+<com.github.florent37.shapeofview.shapes.BubbleView
+        android:id="@+id/heart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:bubble_arrowHeight="10dp"
+        app:bubble_arrowWidth="10dp"
+        app:bubble_arrowPosition="bottom"
+        app:bubble_borderRadius="20dp"
+        >
+
+         <!-- YOUR CONTENT -->
+
+</com.github.florent37.shapeofview.shapes.BubbleView>
+```
+
 # Credits
 
 Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
