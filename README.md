@@ -211,7 +211,6 @@ ShapesOfView came with pre-created shapes :
 
 ```xml
 <com.github.florent37.shapeofview.shapes.BubbleView
-        android:id="@+id/heart"
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:bubble_arrowHeight="10dp"
