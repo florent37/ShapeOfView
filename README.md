@@ -14,12 +14,6 @@ Give a custom shape to any android view
 
 [ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/_latestVersion)
 ```java
-repositories {
-    maven {
-        url  "https://dl.bintray.com/florent37/maven"
-    }
-}
-
 dependencies {
     compile 'com.github.florent37:shapeofview:1.0.0'
 }
@@ -224,7 +218,21 @@ ShapesOfView came with pre-created shapes :
 </com.github.florent37.shapeofview.shapes.BubbleView>
 ```
 
+# Contribute
+
+Feel free to fork this project, and add customs shapes
+
+Then make a `merge-request` after updated the README with a sample of your shape, including a preview
+
+# TODO
+
+# HISTORY
+
+**1.0.1** Added BubbleView
+
 # Credits
+
+Ed Sheeran, for the name of this project and his awesome songs <3
 
 Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
 
