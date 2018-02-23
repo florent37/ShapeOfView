@@ -19,6 +19,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:elevation="6dp"
         app:bubble_arrowHeight="10dp"
@@ -55,6 +56,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:elevation="4dp"
+        android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         app:clip_drawable="@drawable/ic_android_black_24dp"
@@ -88,6 +90,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
@@ -123,6 +126,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
@@ -145,8 +149,7 @@
             android:text="Diagonal"
             android:paddingTop="25dp"
             android:textColor="@android:color/white"
-            android:textStyle="bold" />>
-
+            android:textStyle="bold" />
     </com.github.florent37.shapeofview.shapes.DiagonalView>
 
     <com.github.florent37.shapeofview.shapes.ArcView
@@ -155,6 +158,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
         app:arc_cropDirection="outside"
@@ -191,6 +195,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
         app:triangle_percentBottom="0.5"
@@ -228,6 +233,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
@@ -265,6 +271,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
         app:cutCorner_bottomRightSize="20dp"
