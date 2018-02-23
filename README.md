@@ -14,10 +14,10 @@ Give a custom shape to any android view
 
 <a href='https://ko-fi.com/A160LCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/_latestVersion)
+[ ![Download](null/packages/florent37/maven/shapeofview/images/download.svg?version=1.0.0) ](https://bintray.com/florent37/maven/shapeofview/1.0.0/link)
 ```java
 dependencies {
-    compile 'com.github.florent37:shapeofview:1.0.0'
+    compile 'com.github.florent37:shapeofview:1.0.1'
 }
 ```
 
@@ -51,6 +51,7 @@ You can use custom shape to cut your view
 # Using Path (with elevation)
 
 This method generates also a **shadow path** (with Lollipop elevation API 21+)
+
 Wrap your view with a `ShapeOfView`
 
 ```xml
