@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="florent37.github.com.triangleview.MainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,7 +19,7 @@
         app:title="@string/app_name"
         app:titleTextColor="@android:color/white" />
 
-    <florent37.github.com.triangleview.ListenableTabLayout
+    <com.github.florent37.shapeofview.sample.ListenableTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

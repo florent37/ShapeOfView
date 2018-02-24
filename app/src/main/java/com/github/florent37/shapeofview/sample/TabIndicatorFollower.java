@@ -1,4 +1,4 @@
-package florent37.github.com.triangleview;
+package com.github.florent37.shapeofview.sample;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;

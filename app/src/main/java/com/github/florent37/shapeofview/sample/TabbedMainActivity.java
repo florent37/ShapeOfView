@@ -1,4 +1,4 @@
-package florent37.github.com.triangleview;
+package com.github.florent37.shapeofview.sample;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

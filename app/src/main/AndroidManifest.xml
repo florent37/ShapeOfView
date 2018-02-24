@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="florent37.github.com.triangleview">
+    package="com.github.florent37.shapeofview.sample">
 
     <application
         android:allowBackup="true"
