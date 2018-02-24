@@ -223,8 +223,8 @@ ShapesOfView came with pre-created shapes :
 
 ## Star
 
-[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/star_5_pointed.png)](https://www.github.com/florent37/ShapeOfView)
-[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/star_11_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/Akhunzaada/ShapeOfView/master/medias/star_5_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/Akhunzaada/ShapeOfView/master/medias/star_11_pointed.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
 <com.github.florent37.shapeofview.shapes.StarView
