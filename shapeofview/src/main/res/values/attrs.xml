@@ -11,6 +11,9 @@
     <declare-styleable name="StarView">
         <attr name="star_noOfPoints" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="PolygonView">
+        <attr name="polygon_noOfSides" format="integer"/>
+    </declare-styleable>
     <declare-styleable name="CircleView">
         <attr name="circle_borderWidth" format="dimension"/>
         <attr name="circle_borderColor" format="color"/>

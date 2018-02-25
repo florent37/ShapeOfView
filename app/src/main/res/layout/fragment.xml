@@ -273,5 +273,36 @@
 
         </com.github.florent37.shapeofview.shapes.CutCornerView>
 
+        <com.github.florent37.shapeofview.shapes.PolygonView
+            android:id="@+id/polygonView"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+            app:polygon_noOfSides="9"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Polygon View"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.PolygonView>
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
