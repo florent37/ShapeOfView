@@ -17,7 +17,7 @@ Give a custom shape to any android view
 [ ![Download](null/packages/florent37/maven/shapeofview/images/download.svg?version=1.0.0) ](https://bintray.com/florent37/maven/shapeofview/1.0.0/link)
 ```java
 dependencies {
-    compile 'com.github.florent37:shapeofview:1.0.1'
+    compile 'com.github.florent37:shapeofview:1.0.2'
 }
 ```
 
@@ -247,6 +247,7 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.0.2** Added StarView
 **1.0.1** Added BubbleView
 
 # Credits
