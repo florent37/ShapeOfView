@@ -239,7 +239,7 @@ ShapesOfView came with pre-created shapes :
 
 ## Polygon
 
-[![screen](https://raw.githubusercontent.com/knightcube/ShapeOfView/master/medias/polygon.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/polygon.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
  <com.github.florent37.shapeofview.shapes.PolygonView
