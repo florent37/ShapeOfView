@@ -6,7 +6,6 @@ import android.graphics.Path;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.FloatMath;
 
 import com.github.florent37.shapeofview.R;
 import com.github.florent37.shapeofview.ShapeOfView;
@@ -48,18 +47,17 @@ public class PolygonView extends ShapeOfView {
             public Path createClipPath(int width, int height) {
 
                 final float section = (float) (2.0 * Math.PI / numberOfSides);
-                int polygonSize = Math.min(width,height);
-                int radius = polygonSize / 2;
-                int centerX = width/2;
-                int centerY = height/2;
+                final int polygonSize = Math.min(width, height);
+                final int radius = polygonSize / 2;
+                final int centerX = width / 2;
+                final int centerY = height / 2;
 
-                Path polygonPath = new Path();
-                polygonPath.reset();
-                polygonPath.moveTo((centerX + radius * (float)Math.cos(0)), (centerY + radius * (float)Math.sin(0)));
+                final Path polygonPath = new Path();
+                polygonPath.moveTo((centerX + radius * (float) Math.cos(0)), (centerY + radius * (float) Math.sin(0)));
 
                 for (int i = 1; i < numberOfSides; i++) {
-                    polygonPath.lineTo((centerX + radius * (float)Math.cos(section * i)),
-                            (centerY + radius * (float)Math.sin(section * i)));
+                    polygonPath.lineTo((centerX + radius * (float) Math.cos(section * i)),
+                            (centerY + radius * (float) Math.sin(section * i)));
                 }
 
                 polygonPath.close();
@@ -68,12 +66,12 @@ public class PolygonView extends ShapeOfView {
         });
     }
 
+    public int getNoOfSides() {
+        return numberOfSides;
+    }
+
     public void setNoOfSides(int numberOfSides) {
         this.numberOfSides = numberOfSides;
         postInvalidate();
-    }
-
-    public int getNoOfSides() {
-        return numberOfSides;
     }
 }

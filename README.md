@@ -262,6 +262,7 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.0.3** Added PolygonView
 **1.0.2** Added StarView
 **1.0.1** Added BubbleView
 
