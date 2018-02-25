@@ -1,4 +1,4 @@
-package florent37.github.com.triangleview;
+package com.github.florent37.shapeofview.sample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="florent37.github.com.triangleview.MainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
 
 
     <com.github.florent37.shapeofview.shapes.BubbleView
@@ -161,7 +161,7 @@
         app:arc_height="20dp"
         app:arc_position="bottom"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/triangle">
+        app:layout_constraintTop_toBottomOf="@+id/star">
 
         <ImageView
             android:layout_width="match_parent"
@@ -185,20 +185,17 @@
 
     </com.github.florent37.shapeofview.shapes.ArcView>
 
-    <com.github.florent37.shapeofview.shapes.TriangleView
-        android:id="@+id/triangle"
+    <com.github.florent37.shapeofview.shapes.StarView
+        android:id="@+id/star"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
-        app:triangle_percentBottom="0.5"
-        app:triangle_percentLeft="0"
-        app:triangle_percentRight="0"
+        app:star_noOfPoints="5"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/clipCorner"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/clipCorner">
 
         <ImageView
             android:layout_width="match_parent"
@@ -207,7 +204,7 @@
             android:src="@drawable/shape_of_view" />
 
         <TextView
-            android:text="Triangle"
+            android:text="Star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -220,7 +217,7 @@
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
-    </com.github.florent37.shapeofview.shapes.TriangleView>
+    </com.github.florent37.shapeofview.shapes.StarView>
 
     <com.github.florent37.shapeofview.shapes.RoundRectView
         android:id="@+id/roundRect"

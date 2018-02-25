@@ -221,6 +221,22 @@ ShapesOfView came with pre-created shapes :
 </com.github.florent37.shapeofview.shapes.BubbleView>
 ```
 
+## Star
+
+[![screen](https://raw.githubusercontent.com/Akhunzaada/ShapeOfView/master/medias/star_5_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/Akhunzaada/ShapeOfView/master/medias/star_11_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+
+```xml
+<com.github.florent37.shapeofview.shapes.StarView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:star_noOfPoints="5">
+
+         <!-- YOUR CONTENT -->
+
+</com.github.florent37.shapeofview.shapes.StarView>
+```
+
 # Contribute
 
 Feel free to fork this project, and add customs shapes
