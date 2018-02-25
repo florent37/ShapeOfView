@@ -33,7 +33,7 @@ public class StarView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.StarView);
-            int points = attributes.getInteger(R.styleable.StarView_star_noOfPoints, noOfPoints);
+            final int points = attributes.getInteger(R.styleable.StarView_star_noOfPoints, noOfPoints);
             noOfPoints = points > 2? points : noOfPoints;
             attributes.recycle();
         }
@@ -42,11 +42,11 @@ public class StarView extends ShapeOfView {
             @Override
             public Path createClipPath(int width, int height) {
 
-                int vertices = noOfPoints * 2;
-                float alpha = (float)(2 * Math.PI) / vertices;
-                int radius = (height <= width? height : width) / 2;
-                float centerX = width / 2;
-                float centerY = height / 2;
+                final int vertices = noOfPoints * 2;
+                final float alpha = (float)(2 * Math.PI) / vertices;
+                final int radius = (height <= width? height : width) / 2;
+                final float centerX = width / 2;
+                final float centerY = height / 2;
 
                 final Path path = new Path();
                 for (int i = vertices + 1; i != 0; i--) {
