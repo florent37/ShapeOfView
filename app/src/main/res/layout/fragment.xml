@@ -1,330 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
-
-
-    <com.github.florent37.shapeofview.shapes.BubbleView
-        android:id="@+id/heart"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="6dp"
-        app:bubble_arrowHeight="10dp"
-        app:bubble_arrowWidth="10dp"
-        app:bubble_arrowPosition="bottom"
-        app:bubble_borderRadius="20dp"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/arc">
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/otter" />
-
-        <TextView
-            android:text="Bubble"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"  />
-
-    </com.github.florent37.shapeofview.shapes.BubbleView>
-
-    <com.github.florent37.shapeofview.ShapeOfView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:elevation="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:clip_drawable="@drawable/ic_android_black_24dp"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@+id/arc">
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:text="Droid\nCustom SVG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
-    </com.github.florent37.shapeofview.ShapeOfView>
-
-    <com.github.florent37.shapeofview.shapes.CircleView
-        android:id="@+id/circle"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:circle_borderColor="@android:color/black"
-        app:circle_borderWidth="2dp"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@+id/roundRect">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:text="Circle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:paddingTop="25dp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"  />
-
-    </com.github.florent37.shapeofview.shapes.CircleView>
-
-    <com.github.florent37.shapeofview.shapes.DiagonalView
-        android:id="@+id/diagonal"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:diagonal_angle="10"
-        app:diagonal_direction="left"
-        app:diagonal_position="bottom"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@+id/circle">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Diagonal"
-            android:paddingTop="25dp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />>
-
-    </com.github.florent37.shapeofview.shapes.DiagonalView>
-
-    <com.github.florent37.shapeofview.shapes.ArcView
-        android:id="@+id/arc"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:arc_cropDirection="outside"
-        app:arc_height="20dp"
-        app:arc_position="bottom"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/star">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:text="Arc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:paddingTop="25dp"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"  />
-
-    </com.github.florent37.shapeofview.shapes.ArcView>
-
-    <com.github.florent37.shapeofview.shapes.StarView
-        android:id="@+id/star"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:star_noOfPoints="5"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/clipCorner">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:text="Star"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:paddingTop="25dp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
-
-    </com.github.florent37.shapeofview.shapes.StarView>
-
-    <com.github.florent37.shapeofview.shapes.RoundRectView
-        android:id="@+id/roundRect"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/guidelineRight"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
-        app:roundRect_bottomLeftDiameter="10dp"
-        app:roundRect_bottomRightDiameter="10dp"
-        app:roundRect_topLeftDiameter="10dp"
-        app:roundRect_topRightDiameter="10dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/shape_of_view" />
-
-        <TextView
-            android:text="RoundRect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:paddingTop="25dp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"  />
-
-    </com.github.florent37.shapeofview.shapes.RoundRectView>
-
-    <com.github.florent37.shapeofview.shapes.CutCornerView
-        android:id="@+id/clipCorner"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="4dp"
-        app:cutCorner_bottomRightSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@color/colorPrimary" />
-
-        <TextView
-            android:text="Cut Corner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="20dp"
-            android:gravity="center"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="2"
-            android:shadowRadius="10"
-            android:textSize="11sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"  />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:checked="true"
-            android:textColor="@android:color/white"
-            android:text="Work with all views"/>
-
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:padding="16dp"
+        tools:context="com.github.florent37.shapeofview.sample.MainActivity">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        <com.github.florent37.shapeofview.shapes.BubbleView
+            android:id="@+id/heart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="6dp"
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="20dp" />
+            app:bubble_arrowHeight="10dp"
+            app:bubble_arrowPosition="bottom"
+            app:bubble_arrowWidth="10dp"
+            app:bubble_borderRadius="20dp">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="20dp" />
 
-</android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/otter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Bubble"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.BubbleView>
+
+        <com.github.florent37.shapeofview.ShapeOfView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:clip_drawable="@drawable/ic_android_black_24dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Droid\nCustom SVG"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.ShapeOfView>
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/circle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:circle_borderColor="@android:color/black"
+            app:circle_borderWidth="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Circle"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <com.github.florent37.shapeofview.shapes.DiagonalView
+            android:id="@+id/diagonal"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:diagonal_angle="10"
+            app:diagonal_direction="left"
+            app:diagonal_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="25dp"
+                android:text="Diagonal"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />>
+
+        </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:id="@+id/arc"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:arc_cropDirection="outside"
+            app:arc_height="20dp"
+            app:arc_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Arc"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <com.github.florent37.shapeofview.shapes.StarView
+            android:id="@+id/star"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:star_noOfPoints="5">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Star"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.StarView>
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:id="@+id/roundRect"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:roundRect_bottomLeftDiameter="10dp"
+            app:roundRect_bottomRightDiameter="10dp"
+            app:roundRect_topLeftDiameter="10dp"
+            app:roundRect_topRightDiameter="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="RoundRect"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+        <com.github.florent37.shapeofview.shapes.CutCornerView
+            android:id="@+id/clipCorner"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+
+            app:cutCorner_bottomRightSize="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Cut Corner"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:checked="true"
+                android:text="Work with all views"
+                android:textColor="@android:color/white" />
+
+        </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+    </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
