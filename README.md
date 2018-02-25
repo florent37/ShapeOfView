@@ -237,6 +237,22 @@ ShapesOfView came with pre-created shapes :
 </com.github.florent37.shapeofview.shapes.StarView>
 ```
 
+## Polygon
+
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/star_5_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/star_11_pointed.png)](https://www.github.com/florent37/ShapeOfView)
+
+```xml
+ <com.github.florent37.shapeofview.shapes.PolygonView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            app:polygon_noOfSides="9"
+            >
+         <!-- YOUR CONTENT -->
+
+</com.github.florent37.shapeofview.shapes.PolygonView>
+```
+
 # Contribute
 
 Feel free to fork this project, and add customs shapes
