@@ -74,7 +74,22 @@
                 mapbox:mapbox_cameraTargetLat="40.73581"
                 mapbox:mapbox_cameraTargetLng="-73.99155"
                 mapbox:mapbox_cameraZoom="11"
+                app:mapbox_renderTextureMode="true"
                 mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="RoundRect"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
 
 
         </com.github.florent37.shapeofview.shapes.CircleView>

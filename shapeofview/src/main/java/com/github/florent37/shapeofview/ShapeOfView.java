@@ -58,7 +58,7 @@ public class ShapeOfView extends FrameLayout {
         clipPaint.setColor(Color.WHITE);
 
         setDrawingCacheEnabled(true);
-        setLayerType(LAYER_TYPE_SOFTWARE, null); //Only works for software layers
+        setLayerType(LAYER_TYPE_SOFTWARE, clipPaint); //Only works for software layers
 
         pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
         setWillNotDraw(false);
@@ -96,10 +96,10 @@ public class ShapeOfView extends FrameLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-
         clipPaint.setXfermode(pdMode);
         canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
         clipPaint.setXfermode(null);
+        setLayerType(LAYER_TYPE_HARDWARE , null);
     }
 
     private void calculateLayout() {
