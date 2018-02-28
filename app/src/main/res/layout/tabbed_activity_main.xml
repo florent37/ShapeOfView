@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.github.florent37.shapeofview.sample.MainActivity">
 
@@ -31,7 +32,7 @@
         android:elevation="6dp"
         app:tabMode="scrollable" />
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:elevation="6dp"
         android:layout_height="match_parent">
@@ -53,6 +54,46 @@
                 android:background="@color/colorPrimary" />
         </com.github.florent37.shapeofview.shapes.TriangleView>
 
-    </FrameLayout>
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/circle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+            app:circle_borderColor="@android:color/black"
+            app:circle_borderWidth="2dp">
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                mapbox:mapbox_cameraTargetLat="40.73581"
+                mapbox:mapbox_cameraTargetLng="-73.99155"
+                mapbox:mapbox_cameraZoom="11"
+                app:mapbox_renderTextureMode="true"
+                mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="RoundRect"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+    </RelativeLayout>
 
 </LinearLayout>
