@@ -22,6 +22,10 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -35,4 +39,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:5.4.1'
+
+    compile 'com.github.florent37:rxlifecycle:2.0.4'
+
 }

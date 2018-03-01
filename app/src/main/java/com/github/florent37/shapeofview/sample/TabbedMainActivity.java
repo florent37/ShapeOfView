@@ -17,6 +17,7 @@ import com.mapbox.mapboxsdk.maps.MapView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import florent37.github.com.rxlifecycle.RxLifecycle;
 
 public class TabbedMainActivity extends AppCompatActivity {
     private MapView mapView;
@@ -44,36 +45,17 @@ public class TabbedMainActivity extends AppCompatActivity {
         TabIndicatorFollower.setupWith(tabLayout, triangle);
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mapView.onResume();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mapView.onPause();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        mapView.onStop();
+        RxLifecycle.with(this).onResume().subscribe(event -> mapView.onResume());
+        RxLifecycle.with(this).onPause().subscribe(event -> mapView.onPause());
+        RxLifecycle.with(this).onStop().subscribe(event -> mapView.onStop());
+        RxLifecycle.with(this).onDestroy().subscribe(event -> mapView.onDestroy());
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mapView.onDestroy();
     }
 
     @Override
