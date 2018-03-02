@@ -19,10 +19,10 @@ Give a custom shape to any android view
 
 <a href='https://ko-fi.com/A160LCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg?version=1.0.0) ](https://bintray.com/florent37/maven/shapeofview/1.0.0/link)
+[ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/1.0.0/link)
 ```java
 dependencies {
-    compile 'com.github.florent37:shapeofview:1.0.4'
+    compile 'com.github.florent37:shapeofview:(lastest version)'
 }
 ```
 
@@ -267,9 +267,9 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
-**1.0.4** Enable hardware acceleration after clip view
+**1.0.5** Enable hardware acceleration after clip view
 
-**1.0.3** Added PolygonView
+**1.0.4** Added PolygonView
 
 **1.0.2** Added StarView
 
