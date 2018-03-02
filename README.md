@@ -141,10 +141,10 @@ ShapesOfView came with pre-created shapes :
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:roundRect_bottomLeftDiameter="10dp"
-        app:roundRect_bottomRightDiameter="10dp"
-        app:roundRect_topLeftDiameter="10dp"
-        app:roundRect_topRightDiameter="10dp">
+        app:roundRect_bottomLeftRadius="10dp"
+        app:roundRect_bottomRightRadius="10dp"
+        app:roundRect_topLeftRadius="10dp"
+        app:roundRect_topRightRadius="10dp">
 
 
             <!-- YOUR CONTENT -->
@@ -266,6 +266,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 # TODO
 
 # HISTORY
+
+**1.0.6** Updated roundrect implementation
 
 **1.0.5** Enable hardware acceleration after clip view
 

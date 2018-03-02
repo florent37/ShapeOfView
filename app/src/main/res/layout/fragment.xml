@@ -207,10 +207,10 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:roundRect_bottomLeftDiameter="10dp"
-            app:roundRect_bottomRightDiameter="10dp"
-            app:roundRect_topLeftDiameter="10dp"
-            app:roundRect_topRightDiameter="10dp">
+            app:roundRect_bottomLeftRadius="10dp"
+            app:roundRect_bottomRightRadius="10dp"
+            app:roundRect_topLeftRadius="10dp"
+            app:roundRect_topRightRadius="10dp">
 
             <ImageView
                 android:layout_width="match_parent"

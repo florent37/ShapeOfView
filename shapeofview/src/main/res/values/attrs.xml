@@ -56,10 +56,10 @@
         </attr>
     </declare-styleable>
     <declare-styleable name="RoundRectView">
-        <attr name="roundRect_topLeftDiameter" format="dimension"/>
-        <attr name="roundRect_topRightDiameter" format="dimension"/>
-        <attr name="roundRect_bottomLeftDiameter" format="dimension"/>
-        <attr name="roundRect_bottomRightDiameter" format="dimension"/>
+        <attr name="roundRect_topLeftRadius" format="dimension"/>
+        <attr name="roundRect_topRightRadius" format="dimension"/>
+        <attr name="roundRect_bottomLeftRadius" format="dimension"/>
+        <attr name="roundRect_bottomRightRadius" format="dimension"/>
         <!--
         <attr name="roundRect_borderWidth" format="dimension"/>
         <attr name="roundRect_borderColor" format="color"/>
