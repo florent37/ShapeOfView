@@ -64,8 +64,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
-            app:circle_borderColor="@android:color/black"
-            app:circle_borderWidth="2dp">
+            app:shape_circle_borderColor="@android:color/black"
+            app:shape_circle_borderWidth="2dp">
 
             <com.mapbox.mapboxsdk.maps.MapView
                 android:id="@+id/mapView"

@@ -70,8 +70,8 @@ public class ShapeOfView extends FrameLayout {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
 
-            if(attributes.hasValue(R.styleable.ShapeOfView_clip_drawable)){
-                final int resourceId = attributes.getResourceId(R.styleable.ShapeOfView_clip_drawable, -1);
+            if(attributes.hasValue(R.styleable.ShapeOfView_shape_clip_drawable)){
+                final int resourceId = attributes.getResourceId(R.styleable.ShapeOfView_shape_clip_drawable, -1);
                 if(-1!= resourceId) {
                     setDrawable(resourceId);
                 }

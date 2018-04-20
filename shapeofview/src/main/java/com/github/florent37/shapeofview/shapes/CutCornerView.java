@@ -39,10 +39,10 @@ public class CutCornerView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CutCornerView);
-            topLeftCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_cutCorner_topLeftSize, topLeftCutSize);
-            topRightCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_cutCorner_topRightSize, topRightCutSize);
-            bottomLeftCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_cutCorner_bottomLeftSize, bottomLeftCutSize);
-            bottomRightCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_cutCorner_bottomRightSize, bottomRightCutSize);
+            topLeftCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_shape_cutCorner_topLeftSize, topLeftCutSize);
+            topRightCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_shape_cutCorner_topRightSize, topRightCutSize);
+            bottomLeftCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_shape_cutCorner_bottomLeftSize, bottomLeftCutSize);
+            bottomRightCutSize = attributes.getDimensionPixelSize(R.styleable.CutCornerView_shape_cutCorner_bottomRightSize, bottomRightCutSize);
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {

@@ -19,10 +19,10 @@
             android:layout_marginBottom="8dp"
             android:elevation="6dp"
 
-            app:bubble_arrowHeight="10dp"
-            app:bubble_arrowPosition="bottom"
-            app:bubble_arrowWidth="10dp"
-            app:bubble_borderRadius="20dp">
+            app:shape_bubble_arrowHeight="10dp"
+            app:shape_bubble_arrowPosition="bottom"
+            app:shape_bubble_arrowWidth="10dp"
+            app:shape_bubble_borderRadius="20dp">
 
 
             <ImageView
@@ -52,7 +52,7 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:clip_drawable="@drawable/ic_android_black_24dp">
+            app:shape_clip_drawable="@drawable/ic_android_black_24dp">
 
 
             <ImageView
@@ -83,8 +83,8 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:circle_borderColor="@android:color/black"
-            app:circle_borderWidth="2dp">
+            app:shape_circle_borderColor="@android:color/black"
+            app:shape_circle_borderWidth="2dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -115,9 +115,9 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:diagonal_angle="10"
-            app:diagonal_direction="left"
-            app:diagonal_position="bottom">
+            app:shape_diagonal_angle="10"
+            app:shape_diagonal_direction="left"
+            app:shape_diagonal_position="bottom">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -143,9 +143,9 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:arc_cropDirection="outside"
-            app:arc_height="20dp"
-            app:arc_position="bottom">
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="20dp"
+            app:shape_arc_position="bottom">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -176,7 +176,7 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:star_noOfPoints="5">
+            app:shape_star_noOfPoints="5">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -207,10 +207,10 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:roundRect_bottomLeftRadius="10dp"
-            app:roundRect_bottomRightRadius="10dp"
-            app:roundRect_topLeftRadius="10dp"
-            app:roundRect_topRightRadius="10dp">
+            app:shape_roundRect_bottomLeftRadius="10dp"
+            app:shape_roundRect_bottomRightRadius="10dp"
+            app:shape_roundRect_topLeftRadius="10dp"
+            app:shape_roundRect_topRightRadius="10dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -241,7 +241,7 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:cutCorner_bottomRightSize="20dp">
+            app:shape_cutCorner_bottomRightSize="20dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -279,7 +279,7 @@
             android:layout_height="100dp"
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
-            app:polygon_noOfSides="6"
+            app:shape_polygon_noOfSides="6"
             >
 
             <ImageView

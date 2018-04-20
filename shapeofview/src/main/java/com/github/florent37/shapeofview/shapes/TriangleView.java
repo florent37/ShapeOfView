@@ -35,9 +35,9 @@ public class TriangleView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.TriangleView);
-            percentBottom = attributes.getFloat(R.styleable.TriangleView_triangle_percentBottom, percentBottom);
-            percentLeft = attributes.getFloat(R.styleable.TriangleView_triangle_percentLeft, percentLeft);
-            percentRight = attributes.getFloat(R.styleable.TriangleView_triangle_percentRight, percentRight);
+            percentBottom = attributes.getFloat(R.styleable.TriangleView_shape_triangle_percentBottom, percentBottom);
+            percentLeft = attributes.getFloat(R.styleable.TriangleView_shape_triangle_percentLeft, percentLeft);
+            percentRight = attributes.getFloat(R.styleable.TriangleView_shape_triangle_percentRight, percentRight);
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {

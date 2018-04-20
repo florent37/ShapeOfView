@@ -45,7 +45,7 @@ You can use custom shape to cut your view
         android:layout_width="100dp"
         android:layout_height="100dp"
 
-        app:clip_drawable="@drawable/YOUR_DRAWABLE"
+        app:shape_clip_drawable="@drawable/YOUR_DRAWABLE"
         >
 
     <!-- YOUR CONTENT -->
@@ -105,9 +105,9 @@ ShapesOfView came with pre-created shapes :
          android:layout_height="150dp"
          android:elevation="4dp"
 
-         app:triangle_percentBottom="0.5"
-         app:triangle_percentLeft="0"
-         app:triangle_percentRight="0">
+         app:shape_triangle_percentBottom="0.5"
+         app:shape_triangle_percentLeft="0"
+         app:shape_triangle_percentRight="0">
 
             <!-- YOUR CONTENT -->
 
@@ -124,8 +124,8 @@ ShapesOfView came with pre-created shapes :
         android:layout_height="150dp"
 
         android:elevation="4dp"
-        app:circle_borderColor="@android:color/black"
-        app:circle_borderWidth="2dp">
+        app:shape_circle_borderColor="@android:color/black"
+        app:shape_circle_borderWidth="2dp">
 
             <!-- YOUR CONTENT -->
 
@@ -141,10 +141,10 @@ ShapesOfView came with pre-created shapes :
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:roundRect_bottomLeftRadius="10dp"
-        app:roundRect_bottomRightRadius="10dp"
-        app:roundRect_topLeftRadius="10dp"
-        app:roundRect_topRightRadius="10dp">
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp">
 
 
             <!-- YOUR CONTENT -->
@@ -162,7 +162,7 @@ ShapesOfView came with pre-created shapes :
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:cutCorner_bottomRightSize="20dp">
+        app:shape_cutCorner_bottomRightSize="20dp">
 
          <!-- YOUR CONTENT -->
 
@@ -178,9 +178,9 @@ ShapesOfView came with pre-created shapes :
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:arc_cropDirection="outside"
-        app:arc_height="20dp"
-        app:arc_position="bottom"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="20dp"
+        app:shape_arc_position="bottom"
         >
 
          <!-- YOUR CONTENT -->
@@ -198,9 +198,9 @@ ShapesOfView came with pre-created shapes :
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:diagonal_angle="10"
-        app:diagonal_direction="left"
-        app:diagonal_position="bottom">
+        app:shape_diagonal_angle="10"
+        app:shape_diagonal_direction="left"
+        app:shape_diagonal_position="bottom">
 
          <!-- YOUR CONTENT -->
 
@@ -215,10 +215,10 @@ ShapesOfView came with pre-created shapes :
 <com.github.florent37.shapeofview.shapes.BubbleView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:bubble_arrowHeight="10dp"
-        app:bubble_arrowWidth="10dp"
-        app:bubble_arrowPosition="bottom"
-        app:bubble_borderRadius="20dp"
+        app:shape_bubble_arrowHeight="10dp"
+        app:shape_bubble_arrowWidth="10dp"
+        app:shape_bubble_arrowPosition="bottom"
+        app:shape_bubble_borderRadius="20dp"
         >
 
          <!-- YOUR CONTENT -->
@@ -235,7 +235,7 @@ ShapesOfView came with pre-created shapes :
 <com.github.florent37.shapeofview.shapes.StarView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:star_noOfPoints="5">
+        app:shape_star_noOfPoints="5">
 
          <!-- YOUR CONTENT -->
 
@@ -250,7 +250,7 @@ ShapesOfView came with pre-created shapes :
  <com.github.florent37.shapeofview.shapes.PolygonView
             android:layout_width="150dp"
             android:layout_height="100dp"
-            app:polygon_noOfSides="9"
+            app:shape_polygon_noOfSides="9"
             >
          <!-- YOUR CONTENT -->
 
@@ -266,6 +266,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 # TODO
 
 # HISTORY
+
+**1.0.7** Prefixed all attributes by `shape_`
 
 **1.0.6** Updated roundrect implementation
 

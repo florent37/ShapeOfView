@@ -44,10 +44,10 @@ public class RoundRectView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.RoundRectView);
-            topLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_topLeftRadius, topLeftRadius);
-            topRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_topRightRadius, topRightRadius);
-            bottomLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_bottomLeftRadius, bottomLeftRadius);
-            bottomRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_bottomRightRadius, bottomRightRadius);
+            topLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topLeftRadius, topLeftRadius);
+            topRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topRightRadius, topRightRadius);
+            bottomLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomLeftRadius, bottomLeftRadius);
+            bottomRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomRightRadius, bottomRightRadius);
            // borderColor = attributes.getColor(R.styleable.RoundRectView_roundRect_borderColor, borderColor);
            // borderWidthPx = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_bottomRightDiameter, bottomRightDiameter);
             attributes.recycle();

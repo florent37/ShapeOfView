@@ -42,8 +42,8 @@ public class CircleView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CircleView);
-            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.CircleView_circle_borderWidth, borderWidthPx);
-            borderColor = attributes.getColor(R.styleable.CircleView_circle_borderColor, borderColor);
+            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.CircleView_shape_circle_borderWidth, borderWidthPx);
+            borderColor = attributes.getColor(R.styleable.CircleView_shape_circle_borderColor, borderColor);
             attributes.recycle();
         }
         borderPaint.setAntiAlias(true);

@@ -46,9 +46,9 @@ public class ArcView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ArcView);
-            arcHeight = attributes.getDimensionPixelSize(R.styleable.ArcView_arc_height, arcHeight);
-            arcPosition = attributes.getInteger(R.styleable.ArcView_arc_position, arcPosition);
-            cropDirection = attributes.getInteger(R.styleable.ArcView_arc_cropDirection, cropDirection);
+            arcHeight = attributes.getDimensionPixelSize(R.styleable.ArcView_shape_arc_height, arcHeight);
+            arcPosition = attributes.getInteger(R.styleable.ArcView_shape_arc_position, arcPosition);
+            cropDirection = attributes.getInteger(R.styleable.ArcView_shape_arc_cropDirection, cropDirection);
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {

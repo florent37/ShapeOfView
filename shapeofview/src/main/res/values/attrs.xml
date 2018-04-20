@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ShapeOfView">
-        <attr name="clip_drawable" format="reference"/>
+        <attr name="shape_clip_drawable" format="reference"/>
     </declare-styleable>
     <declare-styleable name="TriangleView">
-        <attr name="triangle_percentLeft" format="float"/>
-        <attr name="triangle_percentBottom" format="float"/>
-        <attr name="triangle_percentRight" format="float"/>
+        <attr name="shape_triangle_percentLeft" format="float"/>
+        <attr name="shape_triangle_percentBottom" format="float"/>
+        <attr name="shape_triangle_percentRight" format="float"/>
     </declare-styleable>
     <declare-styleable name="StarView">
-        <attr name="star_noOfPoints" format="integer"/>
+        <attr name="shape_star_noOfPoints" format="integer"/>
     </declare-styleable>
     <declare-styleable name="PolygonView">
-        <attr name="polygon_noOfSides" format="integer"/>
+        <attr name="shape_polygon_noOfSides" format="integer"/>
     </declare-styleable>
     <declare-styleable name="CircleView">
-        <attr name="circle_borderWidth" format="dimension"/>
-        <attr name="circle_borderColor" format="color"/>
+        <attr name="shape_circle_borderWidth" format="dimension"/>
+        <attr name="shape_circle_borderColor" format="color"/>
     </declare-styleable>
     <declare-styleable name="DiagonalView">
-        <attr name="diagonal_angle" format="integer"/>
-        <attr name="diagonal_position" format="enum">
+        <attr name="shape_diagonal_angle" format="integer"/>
+        <attr name="shape_diagonal_position" format="enum">
             <enum name="bottom" value="1"/>
             <enum name="top" value="2"/>
             <enum name="left" value="3"/>
             <enum name="right" value="4"/>
         </attr>
-        <attr name="diagonal_direction" format="enum">
+        <attr name="shape_diagonal_direction" format="enum">
             <enum name="left" value="1"/>
             <enum name="right" value="2"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="ArcView">
-        <attr name="arc_height" format="dimension"/>
-        <attr name="arc_position" format="enum">
+        <attr name="shape_arc_height" format="dimension"/>
+        <attr name="shape_arc_position" format="enum">
             <enum name="bottom" value="1"/>
             <enum name="top" value="2"/>
             <enum name="left" value="3"/>
             <enum name="right" value="4"/>
         </attr>
-        <attr name="arc_cropDirection" format="enum">
+        <attr name="shape_arc_cropDirection" format="enum">
             <enum name="inside" value="1"/>
             <enum name="outside" value="2"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="BubbleView">
-        <attr name="bubble_borderRadius" format="dimension"/>
-        <attr name="bubble_arrowHeight" format="dimension"/>
-        <attr name="bubble_arrowWidth" format="dimension"/>
-        <attr name="bubble_arrowPosition" format="enum">
+        <attr name="shape_bubble_borderRadius" format="dimension"/>
+        <attr name="shape_bubble_arrowHeight" format="dimension"/>
+        <attr name="shape_bubble_arrowWidth" format="dimension"/>
+        <attr name="shape_bubble_arrowPosition" format="enum">
             <enum name="bottom" value="1"/>
             <enum name="top" value="2"/>
             <enum name="left" value="3"/>
@@ -56,10 +56,10 @@
         </attr>
     </declare-styleable>
     <declare-styleable name="RoundRectView">
-        <attr name="roundRect_topLeftRadius" format="dimension"/>
-        <attr name="roundRect_topRightRadius" format="dimension"/>
-        <attr name="roundRect_bottomLeftRadius" format="dimension"/>
-        <attr name="roundRect_bottomRightRadius" format="dimension"/>
+        <attr name="shape_roundRect_topLeftRadius" format="dimension"/>
+        <attr name="shape_roundRect_topRightRadius" format="dimension"/>
+        <attr name="shape_roundRect_bottomLeftRadius" format="dimension"/>
+        <attr name="shape_roundRect_bottomRightRadius" format="dimension"/>
         <!--
         <attr name="roundRect_borderWidth" format="dimension"/>
         <attr name="roundRect_borderColor" format="color"/>
@@ -67,9 +67,9 @@
     </declare-styleable>
 
     <declare-styleable name="CutCornerView">
-        <attr name="cutCorner_topLeftSize" format="dimension"/>
-        <attr name="cutCorner_topRightSize" format="dimension"/>
-        <attr name="cutCorner_bottomLeftSize" format="dimension"/>
-        <attr name="cutCorner_bottomRightSize" format="dimension"/>
+        <attr name="shape_cutCorner_topLeftSize" format="dimension"/>
+        <attr name="shape_cutCorner_topRightSize" format="dimension"/>
+        <attr name="shape_cutCorner_bottomLeftSize" format="dimension"/>
+        <attr name="shape_cutCorner_bottomRightSize" format="dimension"/>
     </declare-styleable>
 </resources>

@@ -36,7 +36,7 @@ public class PolygonView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.PolygonView);
-            final int sides = attributes.getInteger(R.styleable.PolygonView_polygon_noOfSides, numberOfSides);
+            final int sides = attributes.getInteger(R.styleable.PolygonView_shape_polygon_noOfSides, numberOfSides);
 
             numberOfSides = sides > 3 ? sides : numberOfSides;
             attributes.recycle();

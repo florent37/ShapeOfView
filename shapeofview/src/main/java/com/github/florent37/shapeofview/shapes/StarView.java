@@ -33,7 +33,7 @@ public class StarView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.StarView);
-            final int points = attributes.getInteger(R.styleable.StarView_star_noOfPoints, noOfPoints);
+            final int points = attributes.getInteger(R.styleable.StarView_shape_star_noOfPoints, noOfPoints);
             noOfPoints = points > 2? points : noOfPoints;
             attributes.recycle();
         }
