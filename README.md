@@ -22,7 +22,7 @@ Give a custom shape to any android view
 [ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/)
 ```java
 dependencies {
-    compile 'com.github.florent37:shapeofview:(lastest version)'
+    implementation 'com.github.florent37:shapeofview:(lastest version)'
 }
 ```
 
