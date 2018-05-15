@@ -3,6 +3,7 @@
 [![CircleCI](https://circleci.com/gh/florent37/ShapeOfView/tree/master.svg?style=svg)](https://circleci.com/gh/florent37/ShapeOfView/tree/master)
 
 Give a custom shape to any android view
+Useful for Material Design 2
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/main_small.png)](https://www.github.com/florent37/ShapeOfView)
 
