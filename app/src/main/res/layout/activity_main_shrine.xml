@@ -2,10 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/shrineColor"
-    android:id="@+id/bottomSheet"
     android:orientation="vertical"
     tools:context="com.github.florent37.shapeofview.sample.MainActivity">
 
@@ -34,11 +34,11 @@
         app:layout_constraintTop_toTopOf="@+id/menu" />
 
     <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:id="@+id/middleSheet"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:elevation="4dp"
-        android:id="@+id/middleSheet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,8 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            >
 
 
             <ImageView
@@ -139,23 +140,22 @@
     </com.github.florent37.shapeofview.shapes.CutCornerView>
 
     <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:id="@+id/topSheet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="8dp"
-        android:id="@+id/topSheet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:shape_cutCorner_topLeftSize="12dp"
-        >
+        app:shape_cutCorner_topLeftSize="12dp">
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/shrineColor"
+            android:paddingBottom="12dp"
             android:paddingLeft="22dp"
             android:paddingRight="22dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:background="@color/shrineColor">
+            android:paddingTop="12dp">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -173,9 +173,60 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/middleSheet"
+        app:layout_constraintBottom_toBottomOf="@+id/menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menu"
         app:srcCompat="@drawable/ic_search_black_24dp" />
+
+    <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:elevation="3dp"
+        app:shape_cutCorner_bottomLeftSize="12dp"
+        app:shape_cutCorner_topLeftSize="12dp"
+        app:shape_cutCorner_bottomRightSize="12dp"
+        app:shape_cutCorner_topRightSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addToCart"
+            android:background="@android:color/white"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="ADD TO CART"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </com.github.florent37.shapeofview.shapes.CutCornerView>
 
 </android.support.constraint.ConstraintLayout>

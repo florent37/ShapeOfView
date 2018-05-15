@@ -42,4 +42,9 @@ public class MaterialDesignShrineActivity extends AppCompatActivity {
     void onTopSheetClicked() {
 
     }
+
+    @OnClick(R.id.addToCart)
+    void onAddToCartClicked() {
+
+    }
 }
