@@ -269,6 +269,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.0.8** Used arcTo instead of quads in RoundRect
+
 **1.0.7** Prefixed all attributes by `shape_`
 
 **1.0.6** Updated roundrect implementation
