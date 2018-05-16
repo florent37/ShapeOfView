@@ -210,7 +210,11 @@
             app:shape_roundRect_bottomLeftRadius="10dp"
             app:shape_roundRect_bottomRightRadius="10dp"
             app:shape_roundRect_topLeftRadius="10dp"
-            app:shape_roundRect_topRightRadius="10dp">
+            app:shape_roundRect_topRightRadius="10dp"
+
+            app:shape_roundRect_borderColor="@android:color/black"
+            app:shape_roundRect_borderWidth="2dp"
+            >
 
             <ImageView
                 android:layout_width="match_parent"

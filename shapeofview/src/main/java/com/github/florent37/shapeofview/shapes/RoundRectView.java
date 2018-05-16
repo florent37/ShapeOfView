@@ -2,8 +2,12 @@ package com.github.florent37.shapeofview.shapes;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -15,16 +19,19 @@ import com.github.florent37.shapeofview.manager.ClipPathManager;
 public class RoundRectView extends ShapeOfView {
 
     private final RectF rectF = new RectF();
-    //private final RectF borderRectF = new RectF();
-    //private final Path borderPath = new Path();
-    //private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private int topLeftRadius;
     private int topRightRadius;
     private int bottomRightRadius;
     private int bottomLeftRadius;
-    //@ColorInt
-    //private int borderColor = Color.WHITE;
-    //private int borderWidthPx = 0;
+
+    //region border
+    private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final RectF borderRectF = new RectF();
+    private final Path borderPath = new Path();
+    @ColorInt
+    private int borderColor = Color.WHITE;
+    private int borderWidthPx = 0;
+    //endregion
 
     public RoundRectView(@NonNull Context context) {
         super(context);
@@ -48,11 +55,11 @@ public class RoundRectView extends ShapeOfView {
             topRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topRightRadius, topRightRadius);
             bottomLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomLeftRadius, bottomLeftRadius);
             bottomRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomRightRadius, bottomRightRadius);
-           // borderColor = attributes.getColor(R.styleable.RoundRectView_roundRect_borderColor, borderColor);
-           // borderWidthPx = attributes.getDimensionPixelSize(R.styleable.RoundRectView_roundRect_bottomRightDiameter, bottomRightDiameter);
+            borderColor = attributes.getColor(R.styleable.RoundRectView_shape_roundRect_borderColor, borderColor);
+            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_borderWidth, borderWidthPx);
             attributes.recycle();
         }
-        //borderPaint.setStyle(Paint.Style.STROKE);
+        borderPaint.setStyle(Paint.Style.STROKE);
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
             @Override
             public Path createClipPath(int width, int height) {
@@ -71,12 +78,18 @@ public class RoundRectView extends ShapeOfView {
         return Math.min(from, Math.min(width, height));
     }
 
-    /*
+
     @Override
     public void invalidate() {
         super.invalidate();
-        borderRectF.set(borderWidthPx / 2f, borderWidthPx / 2f, getHeight() - borderWidthPx / 2f, getWidth() - borderWidthPx / 2f);
-        borderPath.set(generatePath(borderRectF, topLeftDiameter, topRightDiameter, bottomRightDiameter, bottomLeftDiameter));
+        borderRectF.set(borderWidthPx / 2f, borderWidthPx / 2f, getWidth() - borderWidthPx / 2f, getHeight() - borderWidthPx / 2f);
+
+        borderPath.set(generatePath(borderRectF,
+                topLeftRadius,
+                topRightRadius,
+                bottomRightRadius,
+                bottomLeftRadius
+        ));
     }
 
     @Override
@@ -89,7 +102,6 @@ public class RoundRectView extends ShapeOfView {
             canvas.drawPath(borderPath, borderPaint);
         }
     }
-    */
 
     private Path generatePath(RectF rect, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius) {
         return generatePath(true, rect, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius);
@@ -191,7 +203,7 @@ public class RoundRectView extends ShapeOfView {
         postInvalidate();
     }
 
-    /*
+
     public int getBorderColor() {
         return borderColor;
     }
@@ -209,5 +221,4 @@ public class RoundRectView extends ShapeOfView {
         this.borderWidthPx = borderWidthPx;
         postInvalidate();
     }
-    */
 }

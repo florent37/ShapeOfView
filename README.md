@@ -146,7 +146,11 @@ ShapesOfView came with pre-created shapes :
         app:shape_roundRect_bottomLeftRadius="10dp"
         app:shape_roundRect_bottomRightRadius="10dp"
         app:shape_roundRect_topLeftRadius="10dp"
-        app:shape_roundRect_topRightRadius="10dp">
+        app:shape_roundRect_topRightRadius="10dp"
+        
+        app:shape_roundRect_borderColor="@android:color/black"
+        app:shape_roundRect_borderWidth="2dp"
+        >
 
 
             <!-- YOUR CONTENT -->
@@ -269,7 +273,7 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
-**1.0.8** Used arcTo instead of quads in RoundRect
+**1.0.8** Used arcTo instead of quads in RoundRect, added border to RoundRect
 
 **1.0.7** Prefixed all attributes by `shape_`
 

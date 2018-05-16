@@ -60,10 +60,8 @@
         <attr name="shape_roundRect_topRightRadius" format="dimension"/>
         <attr name="shape_roundRect_bottomLeftRadius" format="dimension"/>
         <attr name="shape_roundRect_bottomRightRadius" format="dimension"/>
-        <!--
-        <attr name="roundRect_borderWidth" format="dimension"/>
-        <attr name="roundRect_borderColor" format="color"/>
-        -->
+        <attr name="shape_roundRect_borderWidth" format="dimension"/>
+        <attr name="shape_roundRect_borderColor" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="CutCornerView">
