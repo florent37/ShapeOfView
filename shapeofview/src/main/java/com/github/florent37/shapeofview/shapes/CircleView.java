@@ -73,11 +73,12 @@ public class CircleView extends ShapeOfView {
 
     public void setBorderWidthPx(int borderWidthPx) {
         this.borderWidthPx = borderWidthPx;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public void setBorderColor(@ColorInt int borderColor) {
         this.borderColor = borderColor;
+        requiresShapeUpdate();
     }
 
     public float getBorderWidth() {

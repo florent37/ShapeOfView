@@ -62,7 +62,7 @@ public class StarView extends ShapeOfView {
 
     public void setNoOfPoints(int noOfPoints) {
         this.noOfPoints = noOfPoints;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getNoOfPoints() { return noOfPoints; }

@@ -72,6 +72,6 @@ public class PolygonView extends ShapeOfView {
 
     public void setNoOfSides(int numberOfSides) {
         this.numberOfSides = numberOfSides;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 }

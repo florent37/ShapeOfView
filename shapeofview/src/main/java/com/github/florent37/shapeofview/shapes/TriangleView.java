@@ -61,7 +61,7 @@ public class TriangleView extends ShapeOfView {
 
     public void setPercentBottom(float percentBottom) {
         this.percentBottom = percentBottom;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public float getPercentLeft() {
@@ -70,7 +70,7 @@ public class TriangleView extends ShapeOfView {
 
     public void setPercentLeft(float percentLeft) {
         this.percentLeft = percentLeft;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public float getPercentRight() {
@@ -79,6 +79,6 @@ public class TriangleView extends ShapeOfView {
 
     public void setPercentRight(float percentRight) {
         this.percentRight = percentRight;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 }

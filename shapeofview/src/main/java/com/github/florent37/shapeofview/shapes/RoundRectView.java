@@ -78,10 +78,8 @@ public class RoundRectView extends ShapeOfView {
         return Math.min(from, Math.min(width, height));
     }
 
-
     @Override
-    public void invalidate() {
-        super.invalidate();
+    public void requiresShapeUpdate(){
         borderRectF.set(borderWidthPx / 2f, borderWidthPx / 2f, getWidth() - borderWidthPx / 2f, getHeight() - borderWidthPx / 2f);
 
         borderPath.set(generatePath(borderRectF,
@@ -90,6 +88,7 @@ public class RoundRectView extends ShapeOfView {
                 bottomRightRadius,
                 bottomLeftRadius
         ));
+        super.requiresShapeUpdate();
     }
 
     @Override
@@ -173,7 +172,7 @@ public class RoundRectView extends ShapeOfView {
 
     public void setTopLeftRadius(int topLeftRadius) {
         this.topLeftRadius = topLeftRadius;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getTopRightRadius() {
@@ -182,7 +181,7 @@ public class RoundRectView extends ShapeOfView {
 
     public void setTopRightRadius(int topRightRadius) {
         this.topRightRadius = topRightRadius;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getBottomRightRadius() {
@@ -191,7 +190,7 @@ public class RoundRectView extends ShapeOfView {
 
     public void setBottomRightRadius(int bottomRightRadius) {
         this.bottomRightRadius = bottomRightRadius;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getBottomLeftRadius() {
@@ -200,7 +199,7 @@ public class RoundRectView extends ShapeOfView {
 
     public void setBottomLeftRadius(int bottomLeftRadius) {
         this.bottomLeftRadius = bottomLeftRadius;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
 
@@ -210,7 +209,7 @@ public class RoundRectView extends ShapeOfView {
 
     public void setBorderColor(int borderColor) {
         this.borderColor = borderColor;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getBorderWidthPx() {
@@ -219,6 +218,6 @@ public class RoundRectView extends ShapeOfView {
 
     public void setBorderWidthPx(int borderWidthPx) {
         this.borderWidthPx = borderWidthPx;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 }

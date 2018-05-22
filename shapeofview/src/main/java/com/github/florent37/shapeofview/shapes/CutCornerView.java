@@ -82,7 +82,7 @@ public class CutCornerView extends ShapeOfView {
 
     public void setTopLeftCutSize(int topLeftCutSize) {
         this.topLeftCutSize = topLeftCutSize;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getTopRightCutSize() {
@@ -91,7 +91,7 @@ public class CutCornerView extends ShapeOfView {
 
     public void setTopRightCutSize(int topRightCutSize) {
         this.topRightCutSize = topRightCutSize;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getBottomRightCutSize() {
@@ -100,7 +100,7 @@ public class CutCornerView extends ShapeOfView {
 
     public void setBottomRightCutSize(int bottomRightCutSize) {
         this.bottomRightCutSize = bottomRightCutSize;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getBottomLeftCutSize() {
@@ -109,6 +109,6 @@ public class CutCornerView extends ShapeOfView {
 
     public void setBottomLeftCutSize(int bottomLeftCutSize) {
         this.bottomLeftCutSize = bottomLeftCutSize;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 }

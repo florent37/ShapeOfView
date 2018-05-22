@@ -132,7 +132,7 @@ public class DiagonalView extends ShapeOfView {
 
     public void setDiagonalPosition(@DiagonalPosition int diagonalPosition) {
         this.diagonalPosition = diagonalPosition;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getDiagonalPosition() {
@@ -145,7 +145,7 @@ public class DiagonalView extends ShapeOfView {
 
     public void setDiagonalDirection(int diagonalDirection) {
         this.diagonalDirection = diagonalDirection;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getDiagonalAngle() {
@@ -154,6 +154,6 @@ public class DiagonalView extends ShapeOfView {
 
     public void setDiagonalAngle(int diagonalAngle) {
         this.diagonalAngle = diagonalAngle;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 }

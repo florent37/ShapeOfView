@@ -134,7 +134,7 @@ public class ArcView extends ShapeOfView {
 
     public void setArcPosition(@ArcPosition int arcPosition) {
         this.arcPosition = arcPosition;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getCropDirection() {
@@ -143,7 +143,7 @@ public class ArcView extends ShapeOfView {
 
     public void setCropDirection(@CropDirection int cropDirection) {
         this.cropDirection = cropDirection;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     public int getArcHeight() {
@@ -152,7 +152,7 @@ public class ArcView extends ShapeOfView {
 
     public void setArcHeight(int arcHeight) {
         this.arcHeight = arcHeight;
-        postInvalidate();
+        requiresShapeUpdate();
     }
 
     @IntDef(value = {POSITION_BOTTOM, POSITION_TOP, POSITION_LEFT, POSITION_RIGHT})

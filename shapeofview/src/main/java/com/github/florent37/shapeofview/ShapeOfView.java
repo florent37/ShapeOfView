@@ -30,13 +30,11 @@ import com.github.florent37.shapeofview.manager.ClipPathManager;
 
 public class ShapeOfView extends FrameLayout {
 
-    private ClipManager clipManager = null;
-
     private final Paint clipPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
     protected PorterDuffXfermode pdMode;
-
     protected Bitmap mask;
+    private ClipManager clipManager = null;
+    private boolean requiersShapeUpdate = true;
 
     public ShapeOfView(@NonNull Context context) {
         super(context);
@@ -70,9 +68,9 @@ public class ShapeOfView extends FrameLayout {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
 
-            if(attributes.hasValue(R.styleable.ShapeOfView_shape_clip_drawable)){
+            if (attributes.hasValue(R.styleable.ShapeOfView_shape_clip_drawable)) {
                 final int resourceId = attributes.getResourceId(R.styleable.ShapeOfView_shape_clip_drawable, -1);
-                if(-1!= resourceId) {
+                if (-1 != resourceId) {
                     setDrawable(resourceId);
                 }
             }
@@ -81,7 +79,7 @@ public class ShapeOfView extends FrameLayout {
         }
     }
 
-    protected int dpToPx(float dp){
+    protected int dpToPx(float dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());
     }
 
@@ -89,43 +87,36 @@ public class ShapeOfView extends FrameLayout {
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         if (changed) {
-            calculateLayout();
+            requiresShapeUpdate();
         }
+    }
+
+    private boolean sizeDifferent(Canvas canvas) {
+        return mask == null || (mask.getHeight() != canvas.getHeight() || mask.getWidth() != canvas.getWidth());
     }
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        if(mask != null && canvas != null &&
-           (mask.getHeight() != canvas.getHeight() || mask.getWidth() != canvas.getWidth())) {
-            if (!mask.isRecycled()) {
-                mask.recycle();
-            }
-
-            if (clipManager != null) {
-                clipManager.setupClipLayout(canvas.getWidth(), canvas.getHeight());
-                mask = clipManager.createMask(canvas.getWidth(), canvas.getHeight());
-            }
+        if (requiersShapeUpdate || sizeDifferent(canvas)) {
+            calculateLayout(canvas.getWidth(), canvas.getHeight());
+            requiersShapeUpdate = false;
         }
         clipPaint.setXfermode(pdMode);
         canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
         clipPaint.setXfermode(null);
-        setLayerType(LAYER_TYPE_HARDWARE , null);
+        setLayerType(LAYER_TYPE_HARDWARE, null);
     }
 
-    private void calculateLayout() {
-        if(clipManager != null) {
-            final int height = getMeasuredHeight();
-            final int width = getMeasuredWidth();
-            if (width > 0 && height > 0) {
-                if (mask != null && !mask.isRecycled()) {
-                    mask.recycle();
-                }
+    private void calculateLayout(int width, int height) {
+        if (mask != null && !mask.isRecycled()) {
+            mask.recycle();
+        }
 
-                if (clipManager != null) {
-                    clipManager.setupClipLayout(width, height);
-                    mask = clipManager.createMask(width, height);
-                }
+        if (clipManager != null) {
+            if (width > 0 && height > 0) {
+                clipManager.setupClipLayout(width, height);
+                mask = clipManager.createMask(width, height);
 
                 //this needs to be fixed for 25.4.0
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && ViewCompat.getElevation(this) > 0f) {
@@ -162,23 +153,30 @@ public class ShapeOfView extends FrameLayout {
     }
 
     public void setClipPathCreator(ClipPathManager.ClipPathCreator createClipPath) {
-        if(!(clipManager instanceof ClipPathManager)){
+        if (!(clipManager instanceof ClipPathManager)) {
             clipManager = new ClipPathManager();
         }
 
         ((ClipPathManager) clipManager).setClipPathCreator(createClipPath);
+        requiresShapeUpdate();
     }
 
-    public void setDrawable(Drawable drawable){
-        if(!(clipManager instanceof ClipDrawableManager)){
+    public void setDrawable(Drawable drawable) {
+        if (!(clipManager instanceof ClipDrawableManager)) {
             clipManager = new ClipDrawableManager();
         }
 
-        ((ClipDrawableManager)clipManager).setDrawable(drawable);
+        ((ClipDrawableManager) clipManager).setDrawable(drawable);
+        requiresShapeUpdate();
     }
 
-    public void setDrawable(int redId){
+    public void setDrawable(int redId) {
         setDrawable(AppCompatResources.getDrawable(getContext(), redId));
+    }
+
+    public void requiresShapeUpdate() {
+        this.requiersShapeUpdate = true;
+        postInvalidate();
     }
 
 }

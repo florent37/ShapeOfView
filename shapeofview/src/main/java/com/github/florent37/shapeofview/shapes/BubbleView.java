@@ -66,10 +66,12 @@ public class BubbleView extends ShapeOfView {
 
     public void setPosition(@Position int position) {
         this.position = position;
+        requiresShapeUpdate();
     }
 
     public void setBorderRadiusPx(int borderRadiusPx) {
         this.borderRadiusPx = borderRadiusPx;
+        requiresShapeUpdate();
     }
 
     private Path drawBubble(RectF myRect, float topLeftDiameter, float topRightDiameter, float bottomRightDiameter, float bottomLeftDiameter) {
