@@ -273,6 +273,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.0.9** Added requiresShapeUpdate(), allowing animations to work, look at AnimationActivity
+
 **1.0.8** Used arcTo instead of quads in RoundRect, added border to RoundRect
 
 **1.0.7** Prefixed all attributes by `shape_`
