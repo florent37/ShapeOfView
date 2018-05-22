@@ -103,7 +103,7 @@ public class RoundRectView extends ShapeOfView {
     }
 
     private Path generatePath(RectF rect, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius) {
-        return generatePath(true, rect, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius);
+        return generatePath(false, rect, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius);
     }
 
     private Path generatePath(boolean useBezier, RectF rect, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius) {
