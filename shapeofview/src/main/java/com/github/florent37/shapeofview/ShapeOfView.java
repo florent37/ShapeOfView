@@ -96,6 +96,18 @@ public class ShapeOfView extends FrameLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
+        if(mask != null && canvas != null &&
+           (mask.getHeight() != canvas.getHeight() || 
+            mask.getWidth() != canvas.getWidth())) {
+            if (!mask.isRecycled()) {
+                mask.recycle();
+            }
+
+            if (clipManager != null) {
+                clipManager.setupClipLayout(width, height);
+                mask = clipManager.createMask(width, height);
+            }
+        }
         clipPaint.setXfermode(pdMode);
         canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
         clipPaint.setXfermode(null);
