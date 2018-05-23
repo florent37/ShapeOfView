@@ -263,6 +263,24 @@ ShapesOfView came with pre-created shapes :
 </com.github.florent37.shapeofview.shapes.PolygonView>
 ```
 
+## Animation
+
+All shapes methods can be animated
+
+For example, you can animate a RoundRect corner :
+
+[![anim](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/shapeofview_anim.gif)](https://www.github.com/florent37/ShapeOfView)
+
+```
+ValueAnimator.ofFloat(0f, 200f, 0f).apply {
+     addUpdateListener { animation -> roundRect.bottomLeftRadius = (animation.animatedValue as Float).toInt() }
+     duration = 800
+     repeatCount = ValueAnimator.INFINITE
+     repeatMode = ValueAnimator.REVERSE
+}.start()
+```
+
+
 # Contribute
 
 Feel free to fork this project, and add customs shapes

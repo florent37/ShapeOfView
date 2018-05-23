@@ -13,14 +13,13 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:elevation="4dp"
+        android:elevation="6dp"
 
         app:shape_roundRect_bottomLeftRadius="10dp"
         app:shape_roundRect_bottomRightRadius="10dp"
         app:shape_roundRect_topLeftRadius="10dp"
         app:shape_roundRect_topRightRadius="10dp"
 
-        android:visibility="gone"
         app:shape_roundRect_borderColor="@android:color/black"
         app:shape_roundRect_borderWidth="2dp"
         >
