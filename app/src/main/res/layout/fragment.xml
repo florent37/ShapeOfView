@@ -51,6 +51,7 @@
             android:layout_height="150dp"
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
+            android:background="@color/colorPrimary"
 
             app:shape_clip_drawable="@drawable/ic_android_black_24dp">
 

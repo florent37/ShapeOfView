@@ -51,6 +51,21 @@ public class ShapeOfView extends FrameLayout {
         init(context, attrs);
     }
 
+    @Override
+    public void setBackground(Drawable background) {
+        //super.setBackground(background);
+    }
+
+    @Override
+    public void setBackgroundResource(int resid) {
+        //super.setBackgroundResource(resid);
+    }
+
+    @Override
+    public void setBackgroundColor(int color) {
+        //super.setBackgroundColor(color);
+    }
+
     private void init(Context context, AttributeSet attrs) {
         clipPaint.setAntiAlias(true);
         clipPaint.setColor(Color.WHITE);
