@@ -271,7 +271,7 @@ For example, you can animate a RoundRect corner :
 
 [![anim](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/shapeofview_anim.gif)](https://www.github.com/florent37/ShapeOfView)
 
-```
+```kotlin
 ValueAnimator.ofFloat(0f, 200f, 0f).apply {
      addUpdateListener { animation -> roundRect.bottomLeftRadius = (animation.animatedValue as Float).toInt() }
      duration = 800
