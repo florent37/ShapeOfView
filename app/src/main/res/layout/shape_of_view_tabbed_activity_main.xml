@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

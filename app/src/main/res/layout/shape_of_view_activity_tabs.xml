@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -39,7 +39,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar">
 
-        <include layout="@layout/fragment" />
+        <include layout="@layout/shape_of_view_fragment" />
     </FrameLayout>
 
 </RelativeLayout>

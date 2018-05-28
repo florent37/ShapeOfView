@@ -23,7 +23,7 @@ public class MaterialDesignShrineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_shrine);
+        setContentView(R.layout.shape_of_view_activity_main_shrine);
         ButterKnife.bind(this);
     }
 

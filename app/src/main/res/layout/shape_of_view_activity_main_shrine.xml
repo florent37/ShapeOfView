@@ -5,9 +5,9 @@
     android:id="@+id/bottomSheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/shrineColor"
+    android:background="@color/shape_of_view_shrineColor"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.MainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
 
     <ImageView
@@ -151,7 +151,7 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/shrineColor"
+            android:background="@color/shape_of_view_shrineColor"
             android:paddingBottom="12dp"
             android:paddingLeft="22dp"
             android:paddingRight="22dp"

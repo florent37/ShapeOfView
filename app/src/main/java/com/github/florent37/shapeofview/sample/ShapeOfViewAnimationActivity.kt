@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.github.florent37.shapeofview.shapes.RoundRectView
 
-class AnimationActivity : AppCompatActivity() {
+class ShapeOfViewAnimationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_anim)
+        setContentView(R.layout.shape_of_view_activity_anim)
 
         val roundRect = findViewById<RoundRectView>(R.id.roundRect)
         if (roundRect != null) {

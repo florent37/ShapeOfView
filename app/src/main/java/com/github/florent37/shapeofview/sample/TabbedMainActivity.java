@@ -35,7 +35,7 @@ public class TabbedMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tabbed_activity_main);
+        setContentView(R.layout.shape_of_view_tabbed_activity_main);
         ButterKnife.bind(this);
         Mapbox.getInstance(this, "pk.eyJ1IjoiY2hpY2tpbm5pY2siLCJhIjoiY2pka3U2YTdiMDE1YTJ4cjA0YzVyYnpoMSJ9.xlyPakmrR_N4bNqIGe6AKg");
         viewPager.setAdapter(new FakeAdapter(getSupportFragmentManager()));
@@ -97,7 +97,7 @@ public class TabbedMainActivity extends AppCompatActivity {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment, container, false);
+            return inflater.inflate(R.layout.shape_of_view_fragment, container, false);
         }
     }
 }
