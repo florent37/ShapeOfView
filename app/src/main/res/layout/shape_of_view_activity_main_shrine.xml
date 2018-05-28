@@ -19,7 +19,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_menu_black_24dp" />
+        app:srcCompat="@drawable/shape_of_view_ic_menu_black_24dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -61,7 +61,7 @@
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="@+id/image1"
                 app:layout_constraintTop_toTopOf="@+id/image1"
-                app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp" />
+                app:srcCompat="@drawable/shape_of_view_ic_add_shopping_cart_black_24dp" />
 
             <TextView
                 android:id="@+id/label1"
@@ -99,7 +99,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/tea_cup" />
+                app:srcCompat="@drawable/shape_of_view_tea_cup" />
 
             <ImageView
                 android:id="@+id/image2"
@@ -111,7 +111,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/image1"
                 app:layout_constraintStart_toStartOf="@+id/image1"
                 app:layout_constraintTop_toBottomOf="@+id/valeur1"
-                app:srcCompat="@drawable/shoes" />
+                app:srcCompat="@drawable/shape_of_view_shoes" />
 
             <TextView
                 android:id="@+id/label2"
@@ -161,7 +161,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+                app:srcCompat="@drawable/shape_of_view_ic_shopping_cart_black_24dp" />
 
         </FrameLayout>
 
@@ -176,7 +176,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/menu"
-        app:srcCompat="@drawable/ic_search_black_24dp" />
+        app:srcCompat="@drawable/shape_of_view_ic_search_black_24dp" />
 
     <com.github.florent37.shapeofview.shapes.CutCornerView
         android:layout_width="0dp"
@@ -210,7 +210,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintEnd_toStartOf="@+id/textView10"
                 app:layout_constraintTop_toTopOf="@+id/textView10"
-                app:srcCompat="@drawable/ic_add_shopping_cart_black_24dp" />
+                app:srcCompat="@drawable/shape_of_view_ic_add_shopping_cart_black_24dp" />
 
             <TextView
                 android:id="@+id/textView10"
