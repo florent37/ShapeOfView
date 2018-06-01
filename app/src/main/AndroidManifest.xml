@@ -20,6 +20,13 @@
         <activity android:name=".ShapeOfViewAnimationActivity"/>
         <activity android:name=".ShapeOfViewTabActivity"/>
         <activity android:name=".MaterialDesignShrineActivity"/>
+        <activity android:name=".ErrorActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

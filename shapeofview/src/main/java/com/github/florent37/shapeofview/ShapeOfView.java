@@ -110,10 +110,14 @@ public class ShapeOfView extends FrameLayout {
         return mask == null || (mask.getHeight() != canvas.getHeight() || mask.getWidth() != canvas.getWidth());
     }
 
+    protected boolean isMaskRecycled(){
+        return mask == null || mask.isRecycled();
+    }
+
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        if (requiersShapeUpdate || sizeDifferent(canvas)) {
+        if (requiersShapeUpdate || sizeDifferent(canvas) || isMaskRecycled()) {
             calculateLayout(canvas.getWidth(), canvas.getHeight());
             requiersShapeUpdate = false;
         }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/roundRect"
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="6dp"
+
+        app:shape_roundRect_bottomLeftRadius="10dp"
+        app:shape_roundRect_bottomRightRadius="10dp"
+        app:shape_roundRect_topLeftRadius="10dp"
+        app:shape_roundRect_topRightRadius="10dp"
+
+        app:shape_roundRect_borderColor="@android:color/black"
+        app:shape_roundRect_borderWidth="2dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shape_of_view" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowRadius="10"
+            android:text="RoundRect"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+    <!--
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/roundRect2"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:shape_roundRect_bottomLeftRadius="14dp"
+        app:shape_roundRect_bottomRightRadius="14dp"
+        app:shape_roundRect_topLeftRadius="14dp"
+        app:shape_roundRect_topRightRadius="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="with shape"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"/>
+
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+    <FrameLayout
+        android:layout_width="92dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/roundRect2"
+        android:layout_height="28dp"
+        android:background="@drawable/roundrect"
+        android:layout_centerHorizontal="true"
+        />
+-->
+</RelativeLayout>
