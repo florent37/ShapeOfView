@@ -122,7 +122,13 @@ public class ShapeOfView extends FrameLayout {
             requiersShapeUpdate = false;
         }
         clipPaint.setXfermode(pdMode);
-        canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
+        if(!isMaskRecycled()) {
+            try {
+                canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
         clipPaint.setXfermode(null);
         setLayerType(LAYER_TYPE_HARDWARE, null);
     }
