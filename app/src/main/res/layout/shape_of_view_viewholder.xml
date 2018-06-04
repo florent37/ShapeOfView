@@ -1,0 +1,114 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:shape_roundRect_bottomLeftRadius="15dp"
+        app:shape_roundRect_bottomRightRadius="15dp"
+        app:shape_roundRect_topLeftRadius="15dp"
+        app:shape_roundRect_topRightRadius="15dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+
+            <com.github.florent37.shapeofview.shapes.DiagonalView
+                android:id="@+id/diagonal_view"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+
+                app:layout_constraintEnd_toStartOf="@id/guideline_50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:shape_diagonal_angle="30"
+                app:shape_diagonal_direction="right"
+                app:shape_diagonal_position="right">
+
+                <ImageView
+                    android:id="@+id/img_flyer_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/shape_of_view_shoes" />
+            </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+            <TextView
+                android:id="@+id/tv_cell_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:gravity="start"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline_35"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Titre Event" />
+
+            <TextView
+                android:id="@+id/tv_cell_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@id/guideline_90"
+                app:layout_constraintStart_toEndOf="@id/guideline_45"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cell_title"
+                android:text="DescriptionDescriptionDescriptionDescription" />
+
+            <TextView
+                android:id="@+id/tv_rotate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Generaliste"
+                android:textColor="@android:color/white"/>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.45" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+</android.support.constraint.ConstraintLayout>
