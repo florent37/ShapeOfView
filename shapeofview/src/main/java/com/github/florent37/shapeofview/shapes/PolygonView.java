@@ -63,6 +63,11 @@ public class PolygonView extends ShapeOfView {
                 polygonPath.close();
                 return polygonPath;
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return true;
+            }
         });
     }
 

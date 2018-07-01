@@ -16,4 +16,6 @@ public interface ClipManager {
     void setupClipLayout(int width, int height);
 
     Paint getPaint();
+
+    boolean requiresBitmap();
 }

@@ -57,6 +57,11 @@ public class BubbleView extends ShapeOfView {
                 final RectF myRect = new RectF(0, 0, width, height);
                 return drawBubble(myRect, borderRadiusPx, borderRadiusPx, borderRadiusPx, borderRadiusPx);
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return false;
+            }
         });
     }
 

@@ -124,6 +124,11 @@ public class ArcView extends ShapeOfView {
                 }
                 return path;
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return false;
+            }
         });
     }
 

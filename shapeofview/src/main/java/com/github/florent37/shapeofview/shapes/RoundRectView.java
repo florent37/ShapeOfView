@@ -71,6 +71,11 @@ public class RoundRectView extends ShapeOfView {
                         limitSize(bottomLeftRadius, width, height)
                 );
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return false;
+            }
         });
     }
 

@@ -23,6 +23,11 @@ public class ClipPathManager implements ClipManager {
         return paint;
     }
 
+    @Override
+    public boolean requiresBitmap() {
+        return createClipPath != null && createClipPath.requiresBitmap();
+    }
+
     @Nullable
     protected final Path createClipPath(int width, int height) {
         if (createClipPath != null) {
@@ -57,5 +62,6 @@ public class ClipPathManager implements ClipManager {
 
     public interface ClipPathCreator {
         Path createClipPath(int width, int height);
+        boolean requiresBitmap();
     }
 }

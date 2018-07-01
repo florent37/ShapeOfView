@@ -57,6 +57,11 @@ public class StarView extends ShapeOfView {
                 path.close();
                 return path;
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return true;
+            }
         });
     }
 

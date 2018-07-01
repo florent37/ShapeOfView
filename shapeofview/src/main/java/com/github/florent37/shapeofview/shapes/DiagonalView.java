@@ -127,6 +127,11 @@ public class DiagonalView extends ShapeOfView {
                 }
                 return path;
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return false;
+            }
         });
     }
 

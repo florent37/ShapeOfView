@@ -51,6 +51,11 @@ public class CutCornerView extends ShapeOfView {
                 rectF.set(0, 0, width, height);
                 return generatePath(rectF, topLeftCutSize, topRightCutSize, bottomRightCutSize, bottomLeftCutSize);
             }
+
+            @Override
+            public boolean requiresBitmap() {
+                return false;
+            }
         });
     }
 
