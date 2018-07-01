@@ -291,6 +291,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.2.0** Removed bitmap usage in a lot of usecases (diagonal, arc, roundrect, circle)
+
 **1.1.0** Disabled setBackground on ShapeOfView
 
 **1.0.9** Added requiresShapeUpdate(), allowing animations to work, look at AnimationActivity
