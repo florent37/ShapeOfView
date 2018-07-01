@@ -46,37 +46,6 @@
 
         </com.github.florent37.shapeofview.shapes.BubbleView>
 
-        <com.github.florent37.shapeofview.ShapeOfView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="4dp"
-            android:background="@color/colorPrimary"
-
-            app:shape_clip_drawable="@drawable/shape_of_view_ic_android_black_24dp">
-
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/shape_of_view" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:shadowColor="@android:color/black"
-                android:shadowDx="2"
-                android:shadowRadius="10"
-                android:text="Droid\nCustom SVG"
-                android:textColor="@android:color/white"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-
-        </com.github.florent37.shapeofview.ShapeOfView>
-
         <com.github.florent37.shapeofview.shapes.CircleView
             android:id="@+id/circle"
             android:layout_width="150dp"

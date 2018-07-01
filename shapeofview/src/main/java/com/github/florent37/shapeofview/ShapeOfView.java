@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Outline;
@@ -24,7 +25,6 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.FrameLayout;
 
-import com.github.florent37.shapeofview.manager.ClipDrawableManager;
 import com.github.florent37.shapeofview.manager.ClipManager;
 import com.github.florent37.shapeofview.manager.ClipPathManager;
 
@@ -32,9 +32,10 @@ public class ShapeOfView extends FrameLayout {
 
     private final Paint clipPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     protected PorterDuffXfermode pdMode;
-    protected Bitmap mask;
     private ClipManager clipManager = null;
     private boolean requiersShapeUpdate = true;
+    private final Path clipPath = new Path();
+    private Bitmap clipPreview;
 
     public ShapeOfView(@NonNull Context context) {
         super(context);
@@ -79,19 +80,6 @@ public class ShapeOfView extends FrameLayout {
         clipPaint.setColor(Color.BLACK);
         clipPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         clipPaint.setStrokeWidth(1);
-
-        if (attrs != null) {
-            final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
-
-            if (attributes.hasValue(R.styleable.ShapeOfView_shape_clip_drawable)) {
-                final int resourceId = attributes.getResourceId(R.styleable.ShapeOfView_shape_clip_drawable, -1);
-                if (-1 != resourceId) {
-                    setDrawable(resourceId);
-                }
-            }
-
-            attributes.recycle();
-        }
     }
 
     protected int dpToPx(float dp) {
@@ -106,42 +94,37 @@ public class ShapeOfView extends FrameLayout {
         }
     }
 
-    private boolean sizeDifferent(Canvas canvas) {
-        return mask == null || (mask.getHeight() != canvas.getHeight() || mask.getWidth() != canvas.getWidth());
-    }
-
-    protected boolean isMaskRecycled(){
-        return mask == null || mask.isRecycled();
-    }
-
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        if (requiersShapeUpdate || sizeDifferent(canvas) || isMaskRecycled()) {
+        if (requiersShapeUpdate) {
             calculateLayout(canvas.getWidth(), canvas.getHeight());
             requiersShapeUpdate = false;
         }
         clipPaint.setXfermode(pdMode);
-        if(!isMaskRecycled()) {
-            try {
-                canvas.drawBitmap(mask, 0.0f, 0.0f, clipPaint);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+        if(isInEditMode() && clipPreview != null){
+            canvas.drawBitmap(clipPreview, 0, 0, clipPaint);
+        } else {
+            canvas.drawPath(clipPath, clipPaint);
         }
+
         clipPaint.setXfermode(null);
         setLayerType(LAYER_TYPE_HARDWARE, null);
     }
 
     private void calculateLayout(int width, int height) {
-        if (mask != null && !mask.isRecycled()) {
-            mask.recycle();
-        }
-
         if (clipManager != null) {
             if (width > 0 && height > 0) {
                 clipManager.setupClipLayout(width, height);
-                mask = clipManager.createMask(width, height);
+                clipPath.reset();
+                clipPath.set(clipManager.createMask(width, height));
+
+                if(isInEditMode()){
+                    clipPreview = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+                    final Bitmap mask = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+                    final Canvas canvas = new Canvas(mask);
+                    canvas.drawPath(clipPath, clipManager.getPaint());
+                }
 
                 //this needs to be fixed for 25.4.0
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && ViewCompat.getElevation(this) > 0f) {
@@ -184,19 +167,6 @@ public class ShapeOfView extends FrameLayout {
 
         ((ClipPathManager) clipManager).setClipPathCreator(createClipPath);
         requiresShapeUpdate();
-    }
-
-    public void setDrawable(Drawable drawable) {
-        if (!(clipManager instanceof ClipDrawableManager)) {
-            clipManager = new ClipDrawableManager();
-        }
-
-        ((ClipDrawableManager) clipManager).setDrawable(drawable);
-        requiresShapeUpdate();
-    }
-
-    public void setDrawable(int redId) {
-        setDrawable(AppCompatResources.getDrawable(getContext(), redId));
     }
 
     public void requiresShapeUpdate() {

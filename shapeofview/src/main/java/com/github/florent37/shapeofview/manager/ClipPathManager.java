@@ -1,7 +1,5 @@
 package com.github.florent37.shapeofview.manager;
 
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -21,6 +19,10 @@ public class ClipPathManager implements ClipManager {
         paint.setStrokeWidth(1);
     }
 
+    public Paint getPaint() {
+        return paint;
+    }
+
     @Nullable
     protected final Path createClipPath(int width, int height) {
         if (createClipPath != null) {
@@ -34,11 +36,8 @@ public class ClipPathManager implements ClipManager {
     }
 
     @Override
-    public Bitmap createMask(int width, int height) {
-        final Bitmap mask = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        final Canvas canvas = new Canvas(mask);
-        canvas.drawPath(path, paint);
-        return mask;
+    public Path createMask(int width, int height) {
+        return path;
     }
 
     @Nullable

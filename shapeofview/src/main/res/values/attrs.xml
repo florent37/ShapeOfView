@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ShapeOfView">
-        <attr name="shape_clip_drawable" format="reference"/>
-    </declare-styleable>
     <declare-styleable name="TriangleView">
         <attr name="shape_triangle_percentLeft" format="float"/>
         <attr name="shape_triangle_percentBottom" format="float"/>
