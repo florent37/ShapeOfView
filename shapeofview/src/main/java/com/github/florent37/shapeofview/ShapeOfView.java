@@ -33,16 +33,7 @@ public class ShapeOfView extends FrameLayout {
     private final Paint clipPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path clipPath = new Path();
 
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.CLEAR);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
-
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
     protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP);
-    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
 
     @Nullable
     protected Drawable drawable = null;
@@ -146,6 +137,7 @@ public class ShapeOfView extends FrameLayout {
             requiersShapeUpdate = false;
         }
         if (requiresBitmap()) {
+            clipPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
             canvas.drawBitmap(clipBitmap, 0, 0, clipPaint);
         } else {
             canvas.drawPath(rectView, clipPaint);
@@ -177,6 +169,7 @@ public class ShapeOfView extends FrameLayout {
                     }
                 }
 
+                //invert the path
                 final boolean success = rectView.op(clipPath, Path.Op.DIFFERENCE);
 
                 //this needs to be fixed for 25.4.0
