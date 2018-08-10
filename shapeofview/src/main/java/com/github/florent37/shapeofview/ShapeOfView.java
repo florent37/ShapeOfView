@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
@@ -31,12 +32,25 @@ public class ShapeOfView extends FrameLayout {
 
     private final Paint clipPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path clipPath = new Path();
-    protected PorterDuffXfermode pdMode;
+
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.CLEAR);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
+
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+    protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP);
+    //protected PorterDuffXfermode pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
+
     @Nullable
     protected Drawable drawable = null;
     private ClipManager clipManager = new ClipPathManager();
     private boolean requiersShapeUpdate = true;
     private Bitmap clipBitmap;
+
+    final Path rectView = new Path();
 
     public ShapeOfView(@NonNull Context context) {
         super(context);
@@ -55,43 +69,34 @@ public class ShapeOfView extends FrameLayout {
 
     @Override
     public void setBackground(Drawable background) {
+        //disabled here, please set a background to to this view child
         //super.setBackground(background);
     }
 
     @Override
     public void setBackgroundResource(int resid) {
+        //disabled here, please set a background to to this view child
         //super.setBackgroundResource(resid);
     }
 
     @Override
     public void setBackgroundColor(int color) {
+        //disabled here, please set a background to to this view child
         //super.setBackgroundColor(color);
     }
 
     private void init(Context context, AttributeSet attrs) {
         clipPaint.setAntiAlias(true);
-        clipPaint.setColor(Color.WHITE);
 
         setDrawingCacheEnabled(true);
-        setLayerType(LAYER_TYPE_SOFTWARE, clipPaint); //Only works for software layers
-
-        pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
-
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
-
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP);
-        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
 
         setWillNotDraw(false);
 
-        clipPaint.setColor(Color.BLACK);
-        clipPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        clipPaint.setColor(Color.BLUE);
+        clipPaint.setStyle(Paint.Style.FILL);
         clipPaint.setStrokeWidth(1);
         clipPaint.setXfermode(pdMode);
+        setLayerType(LAYER_TYPE_SOFTWARE, null); //Only works for software layers
 
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
@@ -135,6 +140,7 @@ public class ShapeOfView extends FrameLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
+
         if (requiersShapeUpdate) {
             calculateLayout(canvas.getWidth(), canvas.getHeight());
             requiersShapeUpdate = false;
@@ -142,13 +148,14 @@ public class ShapeOfView extends FrameLayout {
         if (requiresBitmap()) {
             canvas.drawBitmap(clipBitmap, 0, 0, clipPaint);
         } else {
-            canvas.drawPath(clipPath, clipPaint);
+            canvas.drawPath(rectView, clipPaint);
         }
-
-        setLayerType(LAYER_TYPE_HARDWARE, null);
     }
 
     private void calculateLayout(int width, int height) {
+        rectView.reset();
+        rectView.addRect(0f, 0f, 1f * getWidth(), 1f * getHeight(), Path.Direction.CW);
+
         if (clipManager != null) {
             if (width > 0 && height > 0) {
                 clipManager.setupClipLayout(width, height);
@@ -170,6 +177,8 @@ public class ShapeOfView extends FrameLayout {
                     }
                 }
 
+                final boolean success = rectView.op(clipPath, Path.Op.DIFFERENCE);
+
                 //this needs to be fixed for 25.4.0
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && ViewCompat.getElevation(this) > 0f) {
                     try {
@@ -180,6 +189,7 @@ public class ShapeOfView extends FrameLayout {
                 }
             }
         }
+
         postInvalidate();
     }
 

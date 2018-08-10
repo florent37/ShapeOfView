@@ -66,7 +66,7 @@ public class PolygonView extends ShapeOfView {
 
             @Override
             public boolean requiresBitmap() {
-                return true;
+                return false;
             }
         });
     }
