@@ -76,11 +76,22 @@ public class ShapeOfView extends FrameLayout {
         setLayerType(LAYER_TYPE_SOFTWARE, clipPaint); //Only works for software layers
 
         pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
+
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OUT);
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_ATOP);
+        //pdMode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
+
         setWillNotDraw(false);
 
         clipPaint.setColor(Color.BLACK);
         clipPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         clipPaint.setStrokeWidth(1);
+        clipPaint.setXfermode(pdMode);
 
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
@@ -128,14 +139,12 @@ public class ShapeOfView extends FrameLayout {
             calculateLayout(canvas.getWidth(), canvas.getHeight());
             requiersShapeUpdate = false;
         }
-        clipPaint.setXfermode(pdMode);
         if (requiresBitmap()) {
             canvas.drawBitmap(clipBitmap, 0, 0, clipPaint);
         } else {
             canvas.drawPath(clipPath, clipPaint);
         }
 
-        clipPaint.setXfermode(null);
         setLayerType(LAYER_TYPE_HARDWARE, null);
     }
 
