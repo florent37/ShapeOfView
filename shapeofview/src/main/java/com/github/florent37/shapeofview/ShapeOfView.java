@@ -86,8 +86,14 @@ public class ShapeOfView extends FrameLayout {
         clipPaint.setColor(Color.BLUE);
         clipPaint.setStyle(Paint.Style.FILL);
         clipPaint.setStrokeWidth(1);
-        clipPaint.setXfermode(pdMode);
-        setLayerType(LAYER_TYPE_SOFTWARE, null); //Only works for software layers
+
+        if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1){
+            clipPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+            setLayerType(LAYER_TYPE_SOFTWARE, clipPaint); //Only works for software layers
+        } else {
+            clipPaint.setXfermode(pdMode);
+            setLayerType(LAYER_TYPE_SOFTWARE, null); //Only works for software layers
+        }
 
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ShapeOfView);
@@ -140,7 +146,15 @@ public class ShapeOfView extends FrameLayout {
             clipPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
             canvas.drawBitmap(clipBitmap, 0, 0, clipPaint);
         } else {
-            canvas.drawPath(rectView, clipPaint);
+            if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1){
+                canvas.drawPath(clipPath, clipPaint);
+            } else {
+                canvas.drawPath(rectView, clipPaint);
+            }
+        }
+
+        if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1) {
+            setLayerType(LAYER_TYPE_HARDWARE, null);
         }
     }
 
@@ -169,8 +183,10 @@ public class ShapeOfView extends FrameLayout {
                     }
                 }
 
-                //invert the path
-                final boolean success = rectView.op(clipPath, Path.Op.DIFFERENCE);
+                //invert the path for android P
+                if(Build.VERSION.SDK_INT > Build.VERSION_CODES.O_MR1) {
+                    final boolean success = rectView.op(clipPath, Path.Op.DIFFERENCE);
+                }
 
                 //this needs to be fixed for 25.4.0
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && ViewCompat.getElevation(this) > 0f) {

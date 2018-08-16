@@ -60,7 +60,7 @@ public class StarView extends ShapeOfView {
 
             @Override
             public boolean requiresBitmap() {
-                return false;
+                return true;
             }
         });
     }
