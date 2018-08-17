@@ -291,6 +291,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.3.1** Backport of 1.3.0 for api 16+
+
 **1.3.0** Fixed rendering on android API 28+
 
 **1.2.0** Removed bitmap usage in a lot of usecases (diagonal, arc, roundrect, circle)
