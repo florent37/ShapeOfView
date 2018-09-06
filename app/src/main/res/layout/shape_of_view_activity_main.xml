@@ -110,6 +110,48 @@
 
         </com.github.florent37.shapeofview.shapes.CutCornerView>
 
+        <com.github.florent37.shapeofview.shapes.CutCornerView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:shape_cutCorner_topRightSize="16dp"
+            app:shape_cutCorner_topLeftSize="16dp"
+            app:shape_cutCorner_bottomLeftSize="16dp"
+            app:shape_cutCorner_bottomRightSize="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/jackman"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="Jackman"
+                android:gravity="center" />
+
+        </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+        <com.github.florent37.shapeofview.shapes.CutCornerView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:shape_cutCorner_topRightSize="16dp"
+            app:shape_cutCorner_topLeftSize="16dp"
+            app:shape_cutCorner_bottomLeftSize="16dp"
+            app:shape_cutCorner_bottomRightSize="16dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/star_wars"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:text="Star Wars"
+                android:gravity="center" />
+
+        </com.github.florent37.shapeofview.shapes.CutCornerView>
+
 
     </LinearLayout>
 

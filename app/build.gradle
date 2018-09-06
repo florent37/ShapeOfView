@@ -43,6 +43,7 @@ dependencies {
 
     implementation 'com.github.florent37:rxlifecycle:2.0.4'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
 }
 repositories {

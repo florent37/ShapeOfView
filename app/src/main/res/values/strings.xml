@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ShapeOfView</string>
+    <string name="diagonallayout_description">Hugh Michael Jackman is an Australian actor, singer and producer. Jackman has won international recognition for playing different roles in various film genres. \n\nHe is best known for his long-running role as Wolverine in the X-Men film series, as well as for his lead roles in the romantic-comedy fantasy Kate &amp; Leopold (2001), the action-horror film Van Helsing (2004)...</string>
+    <string name="arclayout_description">After the formation of the Galactic Empire, the Rebel Alliance recruits Jyn Erso (Felicity Jones) to work with a team including Cassian Andor (Diego Luna) to steal the design schematics of the Empire\'s new superweapon, the Death Star.</string>
+    <string name="arclayout_development">In February 2013, The Walt Disney Company CEO Bob Iger confirmed the development of two stand-alone films, each individually written by Lawrence Kasdan and Simon Kinberg. On February 6, Entertainment Weekly reported that Lucasfilm is working on two films featuring Han Solo and Boba Fett. Disney CFO Jay Rasulo has described the stand-alone films as origin stories. Kathleen Kennedy explained that the stand-alone films will not crossover with the films of the sequel trilogy…</string>
 </resources>
