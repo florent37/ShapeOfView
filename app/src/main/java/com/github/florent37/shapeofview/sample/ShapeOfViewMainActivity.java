@@ -25,6 +25,16 @@ public class ShapeOfViewMainActivity extends AppCompatActivity {
         startActivity(new Intent(this, JackmanActivity.class));
     }
 
+    @OnClick(R.id.star)
+    public void onStarClicked() {
+        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
+    }
+
+    @OnClick(R.id.round)
+    public void onRoundClicked() {
+        startActivity(new Intent(this, ShapeOfViewRoundActivity.class));
+    }
+
     @OnClick(R.id.star_wars)
     public void onStarWarsClicked() {
         startActivity(new Intent(this, StarWarsActivity.class));
@@ -37,6 +47,6 @@ public class ShapeOfViewMainActivity extends AppCompatActivity {
 
     @OnClick(R.id.shapes)
     public void onShapesClicked() {
-        startActivity(new Intent(this, ShapeOfViewTabActivity.class));
+        startActivity(new Intent(this, ShapeOfViewStarActivity.class));
     }
 }

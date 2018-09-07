@@ -34,125 +34,172 @@
 
     </com.github.florent37.shapeofview.shapes.TriangleView>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/triangle"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_marginTop="40dp">
+        android:layout_below="@+id/triangle">
 
 
-
-
-
-        <com.github.florent37.shapeofview.shapes.CutCornerView
-            android:layout_marginTop="16dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/shapes"
-            app:shape_cutCorner_topRightSize="16dp"
-            app:shape_cutCorner_topLeftSize="16dp"
-            app:shape_cutCorner_bottomLeftSize="16dp"
-            app:shape_cutCorner_bottomRightSize="16dp"
-            android:elevation="4dp">
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
 
-            <TextView
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/shapes"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:text="Shapes"
-                android:gravity="center"/>
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Shapes"
+                    android:textColor="@android:color/white" />
 
-        <com.github.florent37.shapeofview.shapes.CutCornerView
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:id="@+id/shrine"
-            app:shape_cutCorner_topRightSize="16dp"
-            app:shape_cutCorner_topLeftSize="16dp"
-            app:shape_cutCorner_bottomLeftSize="16dp"
-            app:shape_cutCorner_bottomRightSize="16dp"
-            android:elevation="4dp">
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <TextView
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/shrine"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:text="Shrine"
-                android:gravity="center"/>
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Shrine"
+                    android:textColor="@android:color/white" />
 
-        <com.github.florent37.shapeofview.shapes.CutCornerView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:shape_cutCorner_topRightSize="16dp"
-            app:shape_cutCorner_topLeftSize="16dp"
-            app:shape_cutCorner_bottomLeftSize="16dp"
-            app:shape_cutCorner_bottomRightSize="16dp"
-            android:layout_marginTop="16dp"
-            android:id="@+id/anim"
-            android:elevation="4dp">
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <TextView
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/anim"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:text="Animation"
-                android:gravity="center" />
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Animation"
+                    android:textColor="@android:color/white" />
 
-        <com.github.florent37.shapeofview.shapes.CutCornerView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:shape_cutCorner_topRightSize="16dp"
-            app:shape_cutCorner_topLeftSize="16dp"
-            app:shape_cutCorner_bottomLeftSize="16dp"
-            app:shape_cutCorner_bottomRightSize="16dp"
-            android:layout_marginTop="16dp"
-            android:id="@+id/jackman"
-            android:elevation="4dp">
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <TextView
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/jackman"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:text="Jackman"
-                android:gravity="center" />
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Jackman"
+                    android:textColor="@android:color/white" />
 
-        <com.github.florent37.shapeofview.shapes.CutCornerView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:shape_cutCorner_topRightSize="16dp"
-            app:shape_cutCorner_topLeftSize="16dp"
-            app:shape_cutCorner_bottomLeftSize="16dp"
-            app:shape_cutCorner_bottomRightSize="16dp"
-            android:layout_marginTop="16dp"
-            android:id="@+id/star_wars"
-            android:elevation="4dp">
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <TextView
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/star_wars"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:text="Star Wars"
-                android:gravity="center" />
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Star Wars"
+                    android:textColor="@android:color/white" />
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/round"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Ed Sheeran"
+                    android:textColor="@android:color/white" />
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
 
 
-    </LinearLayout>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/star"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Star"
+                    android:textColor="@android:color/white" />
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
 
 </RelativeLayout>

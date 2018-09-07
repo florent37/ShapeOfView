@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+            app:shape_arc_cropDirection="outside"
+            app:shape_arc_height="30dp"
+            app:shape_arc_position="bottom"
+            app:shape_diagonal_angle="10"
+            app:shape_diagonal_direction="left"
+            app:shape_diagonal_position="bottom">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_of_view" />
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:id="@+id/circle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="-90dp"
+            android:elevation="4dp"
+            app:shape_circle_borderColor="@android:color/black"
+            app:shape_circle_borderWidth="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edsheeran" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="Circle"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
