@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:elevation="6dp"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.ViewPager
+        <androidx.core.view.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

@@ -1,4 +1,4 @@
-<android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+<androidx.appcompat.widget.RecyclerView android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/recyclerView"
     xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -2,7 +2,7 @@ package com.github.florent37.shapeofview.sample
 
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.github.florent37.shapeofview.shapes.RoundRectView
 
 class ShapeOfViewAnimationActivity : AppCompatActivity() {

@@ -3,7 +3,7 @@ package com.github.florent37.shapeofview.manager;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class ClipPathManager implements ClipManager {
 

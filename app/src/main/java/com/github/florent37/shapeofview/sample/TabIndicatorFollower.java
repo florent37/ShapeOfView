@@ -1,8 +1,9 @@
 package com.github.florent37.shapeofview.sample;
 
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class TabIndicatorFollower {
 
