@@ -19,6 +19,7 @@ Useful for Material Design 2
 
 [ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/)
 ```java
+//compatible with AndroidX
 dependencies {
     implementation 'com.github.florent37:shapeofview:(lastest version)'
 }
@@ -286,6 +287,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 # TODO
 
 # HISTORY
+
+**1.4.0$$ Support AndroidX
 
 **1.3.2** Backport of 1.3.0 for api 14+
 
