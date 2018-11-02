@@ -203,7 +203,7 @@ ShapesOfView came with pre-created shapes :
 
 ## Dotted Edges with Cut Corners
 
-[![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/edges_corners.png)](https://www.github.com/florent37/ShapeOfView)
+[![screen](medias/edges_corners.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
  <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
@@ -218,7 +218,7 @@ ShapesOfView came with pre-created shapes :
 
              <!-- YOUR CONTENT -->
 
-         </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+ </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
 ```
 
 ## Animation
