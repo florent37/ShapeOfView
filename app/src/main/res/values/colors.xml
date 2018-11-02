@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="shape_of_view_shrineColor">#FEDBD0</color>
     <color name="shape_of_view_shrineTextColor">#422A2C</color>
+    <color name="white">#ffffff</color>
 </resources>

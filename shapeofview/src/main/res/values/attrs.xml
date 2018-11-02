@@ -86,6 +86,5 @@
         </attr>
         <attr name="shape_dot_radius" format="dimension"/>
         <attr name="shape_dot_spacing" format="dimension"/>
-        <attr name="shape_dot_shit" format="flags"/>
     </declare-styleable>
 </resources>
