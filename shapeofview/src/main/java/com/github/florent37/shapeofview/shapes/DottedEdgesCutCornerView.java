@@ -190,5 +190,32 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
         this.bottomLeftCutSize = bottomLeftCutSize;
         requiresShapeUpdate();
     }
+
+    public int getDotEdgePosition() {
+        return dotEdgePosition;
+    }
+
+    public void addDotEdgePosition(int dotEdgePosition) {
+        this.dotEdgePosition |= dotEdgePosition;
+        requiresShapeUpdate();
+    }
+
+    public int getDotRadius() {
+        return dotRadius;
+    }
+
+    public void setDotRadius(int dotRadius) {
+        this.dotRadius = dotRadius;
+        requiresShapeUpdate();
+    }
+
+    public int getDotSpacing() {
+        return dotSpacing;
+    }
+
+    public void setDotSpacing(int dotSpacing) {
+        this.dotSpacing = dotSpacing;
+        requiresShapeUpdate();
+    }
 }
 
