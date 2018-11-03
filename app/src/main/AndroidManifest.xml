@@ -30,6 +30,7 @@
         <activity android:name=".JackmanActivity" />
         <activity android:name=".StarWarsActivity" />
         <activity android:name=".ShapeOfViewRoundActivity" />
+        <activity android:name=".DottedEdgesActivity" />
 
     </application>
 

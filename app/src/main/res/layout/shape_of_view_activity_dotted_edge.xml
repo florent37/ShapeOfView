@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d1d1d1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/layoutBottomBar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:shape_dot_radius="3dp"
+            app:shape_dot_spacing="2dp"
+            app:shape_dottedEdgesCutCorner_bottomLeftSize="8dp"
+            app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
+            app:shape_edge_position="right">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary" />
+            </RelativeLayout>
+        </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+
+        <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:shape_dot_radius="3dp"
+            app:shape_dot_spacing="2dp"
+            app:shape_dottedEdgesCutCorner_bottomLeftSize="8dp"
+            app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
+            app:shape_edge_position="left">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorAccent" />
+            </RelativeLayout>
+        </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+    </LinearLayout>
+
+    <com.github.florent37.shapeofview.shapes.CutCornerView
+        android:id="@+id/layoutBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="56dp"
+        app:shape_cutCorner_bottomLeftSize="8dp"
+        app:shape_cutCorner_bottomRightSize="8dp"
+        app:shape_cutCorner_topLeftSize="8dp"
+        app:shape_cutCorner_topRightSize="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                app:shape_dot_radius="3dp"
+                app:shape_dot_spacing="2dp"
+                app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
+                app:shape_dottedEdgesCutCorner_topRightSize="8dp"
+                app:shape_edge_position="left">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark">
+
+                </RelativeLayout>
+            </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+        </RelativeLayout>
+    </com.github.florent37.shapeofview.shapes.CutCornerView>
+</RelativeLayout>
