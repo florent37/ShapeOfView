@@ -308,6 +308,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
+**1.4.1** Added Dotted Edge, thanks to @khunzohn
+
 **1.4.0** Support AndroidX
 
 **1.3.2** Backport of 1.3.0 for api 14+
