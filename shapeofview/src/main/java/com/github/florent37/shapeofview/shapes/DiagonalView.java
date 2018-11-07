@@ -30,7 +30,7 @@ public class DiagonalView extends ShapeOfView {
     @DiagonalPosition
     private int diagonalPosition = POSITION_TOP;
     private int diagonalDirection = POSITION_TOP;
-    private int diagonalAngle = 0;
+    private float diagonalAngle = 0;
 
     public DiagonalView(@NonNull Context context) {
         super(context);
@@ -50,7 +50,7 @@ public class DiagonalView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.DiagonalView);
-            diagonalAngle = attributes.getInteger(R.styleable.DiagonalView_shape_diagonal_angle, diagonalAngle);
+            diagonalAngle = attributes.getFloat(R.styleable.DiagonalView_shape_diagonal_angle, diagonalAngle);
             diagonalDirection = attributes.getInteger(R.styleable.DiagonalView_shape_diagonal_direction, diagonalDirection);
             diagonalPosition = attributes.getInteger(R.styleable.DiagonalView_shape_diagonal_position, diagonalPosition);
             attributes.recycle();
@@ -153,11 +153,11 @@ public class DiagonalView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public int getDiagonalAngle() {
+    public float getDiagonalAngle() {
         return diagonalAngle;
     }
 
-    public void setDiagonalAngle(int diagonalAngle) {
+    public void setDiagonalAngle(float diagonalAngle) {
         this.diagonalAngle = diagonalAngle;
         requiresShapeUpdate();
     }
