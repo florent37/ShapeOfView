@@ -19,7 +19,7 @@
         <attr name="shape_circle_borderColor" format="color"/>
     </declare-styleable>
     <declare-styleable name="DiagonalView">
-        <attr name="shape_diagonal_angle" format="integer"/>
+        <attr name="shape_diagonal_angle" format="float"/>
         <attr name="shape_diagonal_position" format="enum">
             <enum name="bottom" value="1"/>
             <enum name="top" value="2"/>
