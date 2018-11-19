@@ -7,30 +7,31 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.util.AttributeSet;
+
+import com.github.florent37.shapeofview.R;
+import com.github.florent37.shapeofview.ShapeOfView;
+import com.github.florent37.shapeofview.manager.ClipPathManager;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.util.AttributeSet;
-
-import com.github.florent37.shapeofview.ShapeOfView;
-import com.github.florent37.shapeofview.R;
-import com.github.florent37.shapeofview.manager.ClipPathManager;
 
 public class RoundRectView extends ShapeOfView {
 
     private final RectF rectF = new RectF();
-    private int topLeftRadius;
-    private int topRightRadius;
-    private int bottomRightRadius;
-    private int bottomLeftRadius;
-
     //region border
     private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final RectF borderRectF = new RectF();
     private final Path borderPath = new Path();
+    private float topLeftRadius = 0f;
+    private float topRightRadius = 0f;
+    private float bottomRightRadius = 0f;
+    private float bottomLeftRadius = 0f;
     @ColorInt
     private int borderColor = Color.WHITE;
-    private int borderWidthPx = 0;
+
+    private float borderWidthPx = 0f;
     //endregion
 
     public RoundRectView(@NonNull Context context) {
@@ -51,12 +52,12 @@ public class RoundRectView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.RoundRectView);
-            topLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topLeftRadius, topLeftRadius);
-            topRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topRightRadius, topRightRadius);
-            bottomLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomLeftRadius, bottomLeftRadius);
-            bottomRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomRightRadius, bottomRightRadius);
+            topLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topLeftRadius, (int) topLeftRadius);
+            topRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_topRightRadius, (int) topRightRadius);
+            bottomLeftRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomLeftRadius, (int) bottomLeftRadius);
+            bottomRightRadius = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_bottomRightRadius, (int) bottomRightRadius);
             borderColor = attributes.getColor(R.styleable.RoundRectView_shape_roundRect_borderColor, borderColor);
-            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_borderWidth, borderWidthPx);
+            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.RoundRectView_shape_roundRect_borderWidth, (int) borderWidthPx);
             attributes.recycle();
         }
         borderPaint.setStyle(Paint.Style.STROKE);
@@ -79,12 +80,12 @@ public class RoundRectView extends ShapeOfView {
         });
     }
 
-    protected float limitSize(float from, final float width, final float height){
+    protected float limitSize(float from, final float width, final float height) {
         return Math.min(from, Math.min(width, height));
     }
 
     @Override
-    public void requiresShapeUpdate(){
+    public void requiresShapeUpdate() {
         borderRectF.set(borderWidthPx / 2f, borderWidthPx / 2f, getWidth() - borderWidthPx / 2f, getHeight() - borderWidthPx / 2f);
 
         borderPath.set(generatePath(borderRectF,
@@ -171,44 +172,56 @@ public class RoundRectView extends ShapeOfView {
         return path;
     }
 
-    public int getTopLeftRadius() {
+    public float getTopLeftRadiusPx() {
         return topLeftRadius;
     }
 
-    public void setTopLeftRadius(int topLeftRadius) {
+    public void setTopLeftRadiusPx(float topLeftRadius) {
         this.topLeftRadius = topLeftRadius;
         requiresShapeUpdate();
     }
 
-    public int getTopRightRadius() {
+    public void setTopLeftRadiusDp(float topLeftRadius) {
+        setTopLeftRadiusPx(dpToPx(topLeftRadius));
+    }
+
+    public float getTopRightRadiusPx() {
         return topRightRadius;
     }
 
-    public void setTopRightRadius(int topRightRadius) {
+    public void setTopRightRadiusPx(float topRightRadius) {
         this.topRightRadius = topRightRadius;
         requiresShapeUpdate();
     }
 
-    public int getBottomRightRadius() {
+    public void setTopRightRadiusDp(float topRightRadius) {
+        setTopRightRadiusPx(dpToPx(topRightRadius));
+    }
+
+    public float getBottomRightRadiusPx() {
         return bottomRightRadius;
     }
 
-    public void setBottomRightRadius(int bottomRightRadius) {
+    public void setBottomRightRadiusPx(float bottomRightRadius) {
         this.bottomRightRadius = bottomRightRadius;
         requiresShapeUpdate();
     }
-
-    public int getBottomLeftRadius() {
+    public void setBottomRightRadiusDp(float bottomRightRadius) {
+        setBottomRightRadiusPx(dpToPx(bottomRightRadius));
+    }
+    public float getBottomLeftRadiusPx() {
         return bottomLeftRadius;
     }
 
-    public void setBottomLeftRadius(int bottomLeftRadius) {
+    public void setBottomLeftRadiusPx(float bottomLeftRadius) {
         this.bottomLeftRadius = bottomLeftRadius;
         requiresShapeUpdate();
     }
+    public void setBottomLeftRadiusDp(float bottomLeftRadius) {
+        setBottomLeftRadiusPx(dpToPx(bottomLeftRadius));
+    }
 
-
-    public int getBorderColor() {
+    public float getBorderColor() {
         return borderColor;
     }
 
@@ -217,12 +230,16 @@ public class RoundRectView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public int getBorderWidthPx() {
+    public float getBorderWidthPx() {
         return borderWidthPx;
     }
 
-    public void setBorderWidthPx(int borderWidthPx) {
+    public void setBorderWidthPx(float borderWidthPx) {
         this.borderWidthPx = borderWidthPx;
         requiresShapeUpdate();
+    }
+
+    public void setBorderWidthDp(float borderWidth) {
+        setBorderWidthPx(dpToPx(borderWidth));
     }
 }

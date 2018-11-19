@@ -17,7 +17,7 @@ import com.github.florent37.shapeofview.manager.ClipPathManager;
 
 
 public class CircleView extends ShapeOfView {
-    private int borderWidthPx = 0;
+    private float borderWidthPx = 0f;
 
     @ColorInt
     private int borderColor = Color.WHITE;
@@ -42,7 +42,7 @@ public class CircleView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CircleView);
-            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.CircleView_shape_circle_borderWidth, borderWidthPx);
+            borderWidthPx = attributes.getDimensionPixelSize(R.styleable.CircleView_shape_circle_borderWidth, (int) borderWidthPx);
             borderColor = attributes.getColor(R.styleable.CircleView_shape_circle_borderColor, borderColor);
             attributes.recycle();
         }
@@ -76,9 +76,13 @@ public class CircleView extends ShapeOfView {
         }
     }
 
-    public void setBorderWidthPx(int borderWidthPx) {
-        this.borderWidthPx = borderWidthPx;
+    public void setBorderWidthPx(int borderWidth) {
+        this.borderWidthPx = borderWidth;
         requiresShapeUpdate();
+    }
+
+    public void setBorderWidthDp(int borderWidth) {
+        setBorderWidthPx(dpToPx(borderWidth));
     }
 
     public void setBorderColor(@ColorInt int borderColor) {
@@ -86,7 +90,7 @@ public class CircleView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public float getBorderWidth() {
+    public float getBorderWidthPx() {
         return borderWidthPx;
     }
 

@@ -23,13 +23,15 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
 
     private final RectF rectF = new RectF();
 
-    private int topLeftCutSize;
-    private int topRightCutSize;
-    private int bottomRightCutSize;
-    private int bottomLeftCutSize;
+    private float topLeftCutSize = 0f;
+    private float topRightCutSize = 0f;
+    private float bottomRightCutSize = 0f;
+    private float bottomLeftCutSize = 0f;
+
     private int dotEdgePosition;
-    private int dotRadius;
-    private int dotSpacing;
+
+    private float dotRadius = 0f;
+    private float dotSpacing = 0f;
 
     public DottedEdgesCutCornerView(@NonNull Context context) {
         super(context);
@@ -49,13 +51,13 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.DottedEdgesCutCornerView);
-            topLeftCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_topLeftSize, topLeftCutSize);
-            topRightCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_topRightSize, topRightCutSize);
-            bottomLeftCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_bottomLeftSize, bottomLeftCutSize);
-            bottomRightCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_bottomRightSize, bottomRightCutSize);
+            topLeftCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_topLeftSize, (int) topLeftCutSize);
+            topRightCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_topRightSize, (int) topRightCutSize);
+            bottomLeftCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_bottomLeftSize, (int) bottomLeftCutSize);
+            bottomRightCutSize = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dottedEdgesCutCorner_bottomRightSize, (int) bottomRightCutSize);
             dotEdgePosition = attributes.getInteger(R.styleable.DottedEdgesCutCornerView_shape_edge_position, POSITION_NONE);
-            dotRadius = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dot_radius, dotRadius);
-            dotSpacing = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dot_spacing, dotSpacing);
+            dotRadius = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dot_radius, (int) dotRadius);
+            dotSpacing = attributes.getDimensionPixelSize(R.styleable.DottedEdgesCutCornerView_shape_dot_spacing, (int) dotSpacing);
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
@@ -155,40 +157,56 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
         return (dotEdgePosition | positionFlag) == dotEdgePosition;
     }
 
-    public int getTopLeftCutSize() {
+    public float getTopLeftCutSizePx() {
         return topLeftCutSize;
     }
 
-    public void setTopLeftCutSize(int topLeftCutSize) {
+    public void setTopLeftCutSizePx(float topLeftCutSize) {
         this.topLeftCutSize = topLeftCutSize;
         requiresShapeUpdate();
     }
 
-    public int getTopRightCutSize() {
+    public void setTopLeftCutSizeDp(float topLeftCutSize) {
+        setTopLeftCutSizePx(dpToPx(topLeftCutSize));
+    }
+
+    public float getTopRightCutSizePx() {
         return topRightCutSize;
     }
 
-    public void setTopRightCutSize(int topRightCutSize) {
+    public void setTopRightCutSizePx(float topRightCutSize) {
         this.topRightCutSize = topRightCutSize;
         requiresShapeUpdate();
     }
 
-    public int getBottomRightCutSize() {
+    public void setTopRightCutSizeDp(float topRightCutSize) {
+        setTopRightCutSizePx(dpToPx(topRightCutSize));
+    }
+
+    public float getBottomRightCutSizePx() {
         return bottomRightCutSize;
     }
 
-    public void setBottomRightCutSize(int bottomRightCutSize) {
+    public void setBottomRightCutSizePx(float bottomRightCutSize) {
         this.bottomRightCutSize = bottomRightCutSize;
         requiresShapeUpdate();
     }
 
-    public int getBottomLeftCutSize() {
+    public void setBottomRightCutSizeDp(float bottomRightCutSize) {
+        this.setBottomRightCutSizePx(dpToPx(bottomRightCutSize));
+    }
+
+    public float getBottomLeftCutSizePx() {
         return bottomLeftCutSize;
     }
 
-    public void setBottomLeftCutSize(int bottomLeftCutSize) {
+    public void setBottomLeftCutSizePx(float bottomLeftCutSize) {
         this.bottomLeftCutSize = bottomLeftCutSize;
         requiresShapeUpdate();
+    }
+
+    public void setBottomLeftCutSizeDp(float bottomLeftCutSize) {
+        setBottomLeftCutSizePx(dpToPx(bottomLeftCutSize));
     }
 
     public int getDotEdgePosition() {
@@ -200,22 +218,30 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public int getDotRadius() {
+    public float getDotRadiusPx() {
         return dotRadius;
     }
 
-    public void setDotRadius(int dotRadius) {
+    public void setDotRadiusPx(float dotRadius) {
         this.dotRadius = dotRadius;
         requiresShapeUpdate();
     }
 
-    public int getDotSpacing() {
+    public void setDotRadiusDp(float dotRadius) {
+        setDotRadiusDp(dpToPx(dotRadius));
+    }
+
+    public float getDotSpacingPx() {
         return dotSpacing;
     }
 
-    public void setDotSpacing(int dotSpacing) {
+    public void setDotSpacingPx(float dotSpacing) {
         this.dotSpacing = dotSpacing;
         requiresShapeUpdate();
+    }
+
+    public void setDotSpacingDp(float dotSpacing) {
+        setDotRadiusPx(dpToPx(dotSpacing));
     }
 }
 

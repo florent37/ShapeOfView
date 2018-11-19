@@ -30,7 +30,7 @@ public class DiagonalView extends ShapeOfView {
     @DiagonalPosition
     private int diagonalPosition = POSITION_TOP;
     private int diagonalDirection = POSITION_TOP;
-    private float diagonalAngle = 0;
+    private float diagonalAngle = 0f;
 
     public DiagonalView(@NonNull Context context) {
         super(context);

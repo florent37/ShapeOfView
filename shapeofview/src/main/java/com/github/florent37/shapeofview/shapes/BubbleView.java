@@ -23,9 +23,9 @@ public class BubbleView extends ShapeOfView {
     @Position
     private int position = POSITION_BOTTOM;
 
-    private int borderRadiusPx;
-    private int arrowHeightPx;
-    private int arrowWidthPx;
+    private float borderRadiusPx;
+    private float arrowHeightPx;
+    private float arrowWidthPx;
 
     public BubbleView(@NonNull Context context) {
         super(context);
@@ -74,9 +74,44 @@ public class BubbleView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public void setBorderRadiusPx(int borderRadiusPx) {
+    public float getBorderRadiusPx() {
+        return borderRadiusPx;
+    }
+
+    public void setBorderRadiusPx(float borderRadiusPx) {
         this.borderRadiusPx = borderRadiusPx;
         requiresShapeUpdate();
+    }
+
+    public void setBorderRadiusDp(float borderRadiusDp) {
+        this.borderRadiusPx = dpToPx(borderRadiusDp);
+        requiresShapeUpdate();
+    }
+
+    public float getArrowHeightPx() {
+        return arrowHeightPx;
+    }
+
+    public void setArrowHeightPx(float arrowHeight) {
+        this.arrowHeightPx = arrowHeight;
+        requiresShapeUpdate();
+    }
+
+    public void setArrowHeightDp(float arrowHeight) {
+        setArrowHeightPx(dpToPx(arrowHeight));
+    }
+
+    public float getArrowWidthPx() {
+        return arrowWidthPx;
+    }
+
+    public void setArrowWidthPx(float arrowWidth) {
+        this.arrowWidthPx = arrowWidth;
+        requiresShapeUpdate();
+    }
+
+    public void setArrowWidthDp(float arrowWidth) {
+        setArrowWidthPx(dpToPx(arrowWidth));
     }
 
     private Path drawBubble(RectF myRect, float topLeftDiameter, float topRightDiameter, float bottomRightDiameter, float bottomLeftDiameter) {
