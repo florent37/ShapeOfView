@@ -157,56 +157,72 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
         return (dotEdgePosition | positionFlag) == dotEdgePosition;
     }
 
-    public float getTopLeftCutSizePx() {
+    public float getTopLeftCutSize() {
         return topLeftCutSize;
     }
 
-    public void setTopLeftCutSizePx(float topLeftCutSize) {
+    public void setTopLeftCutSize(float topLeftCutSize) {
         this.topLeftCutSize = topLeftCutSize;
         requiresShapeUpdate();
     }
 
-    public void setTopLeftCutSizeDp(float topLeftCutSize) {
-        setTopLeftCutSizePx(dpToPx(topLeftCutSize));
+    public float getTopLeftCutSizeDp() {
+        return pxToDp(getTopLeftCutSize());
     }
 
-    public float getTopRightCutSizePx() {
+    public void setTopLeftCutSizeDp(float topLeftCutSize) {
+        setTopLeftCutSize(dpToPx(topLeftCutSize));
+    }
+
+    public float getTopRightCutSize() {
         return topRightCutSize;
     }
 
-    public void setTopRightCutSizePx(float topRightCutSize) {
+    public void setTopRightCutSize(float topRightCutSize) {
         this.topRightCutSize = topRightCutSize;
         requiresShapeUpdate();
     }
 
-    public void setTopRightCutSizeDp(float topRightCutSize) {
-        setTopRightCutSizePx(dpToPx(topRightCutSize));
+    public float getTopRightCutSizeDp() {
+        return pxToDp(getTopRightCutSize());
     }
 
-    public float getBottomRightCutSizePx() {
+    public void setTopRightCutSizeDp(float topRightCutSize) {
+        setTopRightCutSize(dpToPx(topRightCutSize));
+    }
+
+    public float getBottomRightCutSize() {
         return bottomRightCutSize;
     }
 
-    public void setBottomRightCutSizePx(float bottomRightCutSize) {
+    public void setBottomRightCutSize(float bottomRightCutSize) {
         this.bottomRightCutSize = bottomRightCutSize;
         requiresShapeUpdate();
     }
 
-    public void setBottomRightCutSizeDp(float bottomRightCutSize) {
-        this.setBottomRightCutSizePx(dpToPx(bottomRightCutSize));
+    public float getBottomRightCutSizeDp() {
+        return pxToDp(getBottomRightCutSize());
     }
 
-    public float getBottomLeftCutSizePx() {
+    public void setBottomRightCutSizeDp(float bottomRightCutSize) {
+        this.setBottomRightCutSize(dpToPx(bottomRightCutSize));
+    }
+
+    public float getBottomLeftCutSize() {
         return bottomLeftCutSize;
     }
 
-    public void setBottomLeftCutSizePx(float bottomLeftCutSize) {
+    public void setBottomLeftCutSize(float bottomLeftCutSize) {
         this.bottomLeftCutSize = bottomLeftCutSize;
         requiresShapeUpdate();
     }
 
+    public float getBottomLeftCutSizeDp() {
+        return pxToDp(getBottomLeftCutSize());
+    }
+
     public void setBottomLeftCutSizeDp(float bottomLeftCutSize) {
-        setBottomLeftCutSizePx(dpToPx(bottomLeftCutSize));
+        setBottomLeftCutSize(dpToPx(bottomLeftCutSize));
     }
 
     public int getDotEdgePosition() {
@@ -218,30 +234,38 @@ public class DottedEdgesCutCornerView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public float getDotRadiusPx() {
+    public float getDotRadius() {
         return dotRadius;
     }
 
-    public void setDotRadiusPx(float dotRadius) {
+    public void setDotRadius(float dotRadius) {
         this.dotRadius = dotRadius;
         requiresShapeUpdate();
     }
 
-    public void setDotRadiusDp(float dotRadius) {
-        setDotRadiusDp(dpToPx(dotRadius));
+    public float getDotRadiusDp() {
+        return pxToDp(getDotRadius());
     }
 
-    public float getDotSpacingPx() {
+    public void setDotRadiusDp(float dotRadius) {
+        setDotRadius(dpToPx(dotRadius));
+    }
+
+    public float getDotSpacing() {
         return dotSpacing;
     }
 
-    public void setDotSpacingPx(float dotSpacing) {
+    public void setDotSpacing(float dotSpacing) {
         this.dotSpacing = dotSpacing;
         requiresShapeUpdate();
     }
 
+    public float getDotSpacingDp() {
+        return pxToDp(dotSpacing);
+    }
+
     public void setDotSpacingDp(float dotSpacing) {
-        setDotRadiusPx(dpToPx(dotSpacing));
+        setDotRadius(dpToPx(dotSpacing));
     }
 }
 

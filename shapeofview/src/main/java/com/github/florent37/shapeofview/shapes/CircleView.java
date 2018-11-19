@@ -76,13 +76,9 @@ public class CircleView extends ShapeOfView {
         }
     }
 
-    public void setBorderWidthPx(int borderWidth) {
+    public void setBorderWidth(float borderWidth) {
         this.borderWidthPx = borderWidth;
         requiresShapeUpdate();
-    }
-
-    public void setBorderWidthDp(int borderWidth) {
-        setBorderWidthPx(dpToPx(borderWidth));
     }
 
     public void setBorderColor(@ColorInt int borderColor) {
@@ -90,8 +86,16 @@ public class CircleView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public float getBorderWidthPx() {
+    public void setBorderWidthDp(float borderWidth) {
+        setBorderWidth(dpToPx(borderWidth));
+    }
+
+    public float getBorderWidth() {
         return borderWidthPx;
+    }
+
+    public float getBorderWidthDp() {
+        return pxToDp(getBorderWidth());
     }
 
     public int getBorderColor() {

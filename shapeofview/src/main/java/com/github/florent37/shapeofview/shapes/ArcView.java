@@ -151,17 +151,21 @@ public class ArcView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public float getArcHeightPx() {
+    public float getArcHeight() {
         return arcHeightPx;
     }
 
-    public void setArcHeightPx(float arcHeight) {
+    public void setArcHeight(float arcHeight) {
         this.arcHeightPx = arcHeight;
         requiresShapeUpdate();
     }
 
+    public float getArcHeightDp() {
+        return pxToDp(arcHeightPx);
+    }
+
     public void setArcHeightDp(float arcHeight) {
-        this.setArcHeightPx(dpToPx(arcHeight));
+        this.setArcHeight(dpToPx(arcHeight));
     }
 
     @IntDef(value = {POSITION_BOTTOM, POSITION_TOP, POSITION_LEFT, POSITION_RIGHT})

@@ -172,53 +172,72 @@ public class RoundRectView extends ShapeOfView {
         return path;
     }
 
-    public float getTopLeftRadiusPx() {
+    public float getTopLeftRadius() {
         return topLeftRadius;
     }
 
-    public void setTopLeftRadiusPx(float topLeftRadius) {
+    public void setTopLeftRadius(float topLeftRadius) {
         this.topLeftRadius = topLeftRadius;
         requiresShapeUpdate();
     }
 
-    public void setTopLeftRadiusDp(float topLeftRadius) {
-        setTopLeftRadiusPx(dpToPx(topLeftRadius));
+    public float getTopLeftRadiusDp() {
+        return pxToDp(getTopLeftRadius());
     }
 
-    public float getTopRightRadiusPx() {
+    public void setTopLeftRadiusDp(float topLeftRadius) {
+        setTopLeftRadius(dpToPx(topLeftRadius));
+    }
+
+    public float getTopRightRadius() {
         return topRightRadius;
     }
 
-    public void setTopRightRadiusPx(float topRightRadius) {
+    public void setTopRightRadius(float topRightRadius) {
         this.topRightRadius = topRightRadius;
         requiresShapeUpdate();
     }
 
-    public void setTopRightRadiusDp(float topRightRadius) {
-        setTopRightRadiusPx(dpToPx(topRightRadius));
+    public float getTopRightRadiusDp() {
+        return pxToDp(getTopRightRadius());
     }
 
-    public float getBottomRightRadiusPx() {
+    public void setTopRightRadiusDp(float topRightRadius) {
+        setTopRightRadius(dpToPx(topRightRadius));
+    }
+
+    public float getBottomRightRadius() {
         return bottomRightRadius;
     }
 
-    public void setBottomRightRadiusPx(float bottomRightRadius) {
+    public void setBottomRightRadius(float bottomRightRadius) {
         this.bottomRightRadius = bottomRightRadius;
         requiresShapeUpdate();
     }
-    public void setBottomRightRadiusDp(float bottomRightRadius) {
-        setBottomRightRadiusPx(dpToPx(bottomRightRadius));
+
+    public float getBottomRightRadiusDp() {
+        return pxToDp(getBottomRightRadius());
     }
-    public float getBottomLeftRadiusPx() {
+
+    public void setBottomRightRadiusDp(float bottomRightRadius) {
+        setBottomRightRadius(dpToPx(bottomRightRadius));
+    }
+
+    public float getBottomLeftRadius() {
         return bottomLeftRadius;
     }
 
-    public void setBottomLeftRadiusPx(float bottomLeftRadius) {
+    public void setBottomLeftRadius(float bottomLeftRadius) {
         this.bottomLeftRadius = bottomLeftRadius;
         requiresShapeUpdate();
     }
+
+    public float getBottomLeftRadiusDp() {
+        return pxToDp(getBottomLeftRadius());
+    }
+
     public void setBottomLeftRadiusDp(float bottomLeftRadius) {
-        setBottomLeftRadiusPx(dpToPx(bottomLeftRadius));
+        setBottomLeftRadius(dpToPx(bottomLeftRadius));
     }
 
     public float getBorderColor() {
@@ -230,16 +249,20 @@ public class RoundRectView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public float getBorderWidthPx() {
+    public float getBorderWidth() {
         return borderWidthPx;
     }
 
-    public void setBorderWidthPx(float borderWidthPx) {
-        this.borderWidthPx = borderWidthPx;
+    public void setBorderWidth(float borderWidth) {
+        this.borderWidthPx = borderWidth;
         requiresShapeUpdate();
     }
 
+    public float getBorderWidthDp() {
+        return pxToDp(getBorderWidth());
+    }
+
     public void setBorderWidthDp(float borderWidth) {
-        setBorderWidthPx(dpToPx(borderWidth));
+        setBorderWidth(dpToPx(borderWidth));
     }
 }

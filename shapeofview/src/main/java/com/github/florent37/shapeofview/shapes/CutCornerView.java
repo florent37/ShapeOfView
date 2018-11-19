@@ -4,13 +4,14 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Path;
 import android.graphics.RectF;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 
-import com.github.florent37.shapeofview.ShapeOfView;
 import com.github.florent37.shapeofview.R;
+import com.github.florent37.shapeofview.ShapeOfView;
 import com.github.florent37.shapeofview.manager.ClipPathManager;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class CutCornerView extends ShapeOfView {
 
@@ -81,55 +82,71 @@ public class CutCornerView extends ShapeOfView {
         return path;
     }
 
-    public float getTopLeftCutSizePx() {
+    public float getTopLeftCutSize() {
         return topLeftCutSizePx;
     }
 
-    public void setTopLeftCutSizePx(float topLeftCutSize) {
+    public void setTopLeftCutSize(float topLeftCutSize) {
         this.topLeftCutSizePx = topLeftCutSize;
         requiresShapeUpdate();
     }
 
-    public void setTopLeftCutSizeDp(float topLeftCutSize) {
-        setTopLeftCutSizePx(dpToPx(topLeftCutSize));
+    public float getTopLeftCutSizeDp() {
+        return pxToDp(getTopLeftCutSize());
     }
 
-    public float getTopRightCutSizePx() {
+    public void setTopLeftCutSizeDp(float topLeftCutSize) {
+        setTopLeftCutSize(dpToPx(topLeftCutSize));
+    }
+
+    public float getTopRightCutSize() {
         return topRightCutSizePx;
     }
 
-    public void setTopRightCutSizePx(float topRightCutSize) {
+    public void setTopRightCutSize(float topRightCutSize) {
         this.topRightCutSizePx = topRightCutSize;
         requiresShapeUpdate();
     }
 
-    public void setTopRightCutSizeDp(float topRightCutSize) {
-        setTopRightCutSizeDp(dpToPx(topRightCutSize));
+    public float getTopRightCutSizeDp() {
+        return pxToDp(getTopRightCutSize());
     }
 
-    public float getBottomRightCutSizePx() {
+    public void setTopRightCutSizeDp(float topRightCutSize) {
+        setTopRightCutSize(dpToPx(topRightCutSize));
+    }
+
+    public float getBottomRightCutSize() {
         return bottomRightCutSizePx;
     }
 
-    public void setBottomRightCutSizePx(float bottomRightCutSize) {
+    public void setBottomRightCutSize(float bottomRightCutSize) {
         this.bottomRightCutSizePx = bottomRightCutSize;
         requiresShapeUpdate();
     }
 
-    public void setBottomRightCutSizeDp(float bottomRightCutSize) {
-        setBottomRightCutSizePx(dpToPx(bottomRightCutSize));
+    public float getBottomRightCutSizeDp() {
+        return pxToDp(getBottomRightCutSize());
     }
 
-    public float getBottomLeftCutSizePx() {
+    public void setBottomRightCutSizeDp(float bottomRightCutSize) {
+        setBottomRightCutSize(dpToPx(bottomRightCutSize));
+    }
+
+    public float getBottomLeftCutSize() {
         return bottomLeftCutSizePx;
     }
 
-    public void setBottomLeftCutSizePx(float bottomLeftCutSize) {
+    public void setBottomLeftCutSize(float bottomLeftCutSize) {
         this.bottomLeftCutSizePx = bottomLeftCutSize;
         requiresShapeUpdate();
     }
 
+    public float getBottomLeftCutSizeDp() {
+        return pxToDp(getBottomLeftCutSize());
+    }
+
     public void setBottomLeftCutSizeDp(float bottomLeftCutSize) {
-        setBottomLeftCutSizePx(dpToPx(bottomLeftCutSize));
+        setBottomLeftCutSize(dpToPx(bottomLeftCutSize));
     }
 }
