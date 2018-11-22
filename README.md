@@ -311,7 +311,6 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 **1.4.5** Removed ArcView's ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 
-
 **1.4.1** Added Dotted Edge, thanks to @khunzohn
 
 **1.4.0** Support AndroidX
