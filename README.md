@@ -98,12 +98,13 @@ ShapesOfView came with pre-created shapes :
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/arc.png)](https://www.github.com/florent37/ShapeOfView)
 
+ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
+
 ```xml
 <com.github.florent37.shapeofview.shapes.ArcView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
-        app:shape_arc_cropDirection="outside"
         app:shape_arc_height="20dp"
         app:shape_arc_position="bottom"
         >
@@ -287,6 +288,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 # TODO
 
 # HISTORY
+
+**1.4.1** Removed ArcView's ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 
 **1.4.0** Support AndroidX
 
