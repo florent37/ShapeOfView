@@ -16,7 +16,6 @@
             android:layout_height="200dp"
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
-            app:shape_arc_cropDirection="outside"
             app:shape_arc_height="30dp"
             app:shape_arc_position="bottom"
             app:shape_diagonal_angle="10"

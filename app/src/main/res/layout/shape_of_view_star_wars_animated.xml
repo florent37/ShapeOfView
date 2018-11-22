@@ -16,7 +16,7 @@
         >
 
         <com.github.florent37.shapeofview.shapes.ArcView
-            android:id="@+id/diagonalLayout"
+            android:id="@+id/arcLayout"
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:layout_alignParentLeft="true"
@@ -67,7 +67,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/diagonalLayout"
+            android:layout_below="@+id/arcLayout"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:padding="20dp"

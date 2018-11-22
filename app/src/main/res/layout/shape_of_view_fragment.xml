@@ -144,7 +144,6 @@
             android:layout_marginBottom="8dp"
             android:elevation="4dp"
 
-            app:shape_arc_cropDirection="outside"
             app:shape_arc_height="20dp"
             app:shape_arc_position="bottom">
 

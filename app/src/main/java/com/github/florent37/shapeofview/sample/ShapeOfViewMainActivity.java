@@ -40,6 +40,11 @@ public class ShapeOfViewMainActivity extends AppCompatActivity {
         startActivity(new Intent(this, StarWarsActivity.class));
     }
 
+    @OnClick(R.id.star_wars_animated)
+    public void onStarWarsAnimatedClicked() {
+        startActivity(new Intent(this, ShapeOfViewStarAnimatedActivity.class));
+    }
+
     @OnClick(R.id.shrine)
     public void onShrineClicked() {
         startActivity(new Intent(this, MaterialDesignShrineActivity.class));

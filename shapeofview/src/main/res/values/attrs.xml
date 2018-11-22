@@ -39,10 +39,6 @@
             <enum name="left" value="3"/>
             <enum name="right" value="4"/>
         </attr>
-        <attr name="shape_arc_cropDirection" format="enum">
-            <enum name="inside" value="1"/>
-            <enum name="outside" value="2"/>
-        </attr>
     </declare-styleable>
     <declare-styleable name="BubbleView">
         <attr name="shape_bubble_borderRadius" format="dimension"/>
