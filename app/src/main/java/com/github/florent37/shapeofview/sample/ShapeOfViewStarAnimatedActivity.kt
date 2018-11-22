@@ -14,7 +14,7 @@ class ShapeOfViewStarAnimatedActivity : AppCompatActivity() {
         val arcLayout = findViewById<ArcView>(R.id.arcLayout)
         if (arcLayout != null) {
             ValueAnimator.ofFloat(0f, -200f, 200f).apply {
-                addUpdateListener { animation -> arcLayout.arcHeight = (animation.animatedValue as Float).toInt() }
+                addUpdateListener { animation -> arcLayout.arcHeight = (animation.animatedValue as Float) }
                 duration = 5000
                 repeatCount = ValueAnimator.INFINITE
                 repeatMode = ValueAnimator.REVERSE

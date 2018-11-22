@@ -26,7 +26,7 @@ public class ArcView extends ShapeOfView {
     private int arcPosition = POSITION_TOP;
 
 
-    private int arcHeight = 0;
+    private float arcHeightPx = 0f;
 
     public ArcView(@NonNull Context context) {
         super(context);
@@ -46,7 +46,7 @@ public class ArcView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ArcView);
-            arcHeight = attributes.getDimensionPixelSize(R.styleable.ArcView_shape_arc_height, arcHeight);
+            arcHeightPx = attributes.getDimensionPixelSize(R.styleable.ArcView_shape_arc_height, (int) arcHeightPx);
             arcPosition = attributes.getInteger(R.styleable.ArcView_shape_arc_position, arcPosition);
             attributes.recycle();
         }
@@ -57,7 +57,8 @@ public class ArcView extends ShapeOfView {
 
                 final boolean isCropInside = getCropDirection() == CROP_INSIDE;
 
-                final int arcHeightAbs = Math.abs(arcHeight);
+                final float arcHeightAbs = Math.abs(arcHeightPx);
+
                 switch (arcPosition) {
                     case POSITION_BOTTOM: {
                         if (isCropInside) {
@@ -83,7 +84,7 @@ public class ArcView extends ShapeOfView {
                             path.lineTo(width, height);
                             path.close();
                         } else {
-                            path.moveTo(0, arcHeight);
+                            path.moveTo(0, arcHeightAbs);
                             path.quadTo(width / 2, -arcHeightAbs, width, arcHeightAbs);
                             path.lineTo(width, height);
                             path.lineTo(0, height);
@@ -94,7 +95,7 @@ public class ArcView extends ShapeOfView {
                         if (isCropInside) {
                             path.moveTo(width, 0);
                             path.lineTo(0, 0);
-                            path.quadTo(arcHeight * 2, height / 2, 0, height);
+                            path.quadTo(arcHeightAbs * 2, height / 2, 0, height);
                             path.lineTo(width, height);
                             path.close();
                         } else {
@@ -143,16 +144,24 @@ public class ArcView extends ShapeOfView {
     }
 
     public int getCropDirection() {
-        return arcHeight > 0 ? CROP_OUTSIDE : CROP_INSIDE ;
+        return arcHeightPx > 0 ? CROP_OUTSIDE : CROP_INSIDE ;
     }
 
-    public int getArcHeight() {
-        return arcHeight;
+    public float getArcHeight() {
+        return arcHeightPx;
     }
 
-    public void setArcHeight(int arcHeight) {
-        this.arcHeight = arcHeight;
+    public void setArcHeight(float arcHeight) {
+        this.arcHeightPx = arcHeight;
         requiresShapeUpdate();
+    }
+
+    public float getArcHeightDp() {
+        return pxToDp(arcHeightPx);
+    }
+
+    public void setArcHeightDp(float arcHeight) {
+        this.setArcHeight(dpToPx(arcHeight));
     }
 
     @IntDef(value = {POSITION_BOTTOM, POSITION_TOP, POSITION_LEFT, POSITION_RIGHT})

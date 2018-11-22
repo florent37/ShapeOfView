@@ -19,7 +19,7 @@
         <attr name="shape_circle_borderColor" format="color"/>
     </declare-styleable>
     <declare-styleable name="DiagonalView">
-        <attr name="shape_diagonal_angle" format="integer"/>
+        <attr name="shape_diagonal_angle" format="float"/>
         <attr name="shape_diagonal_position" format="enum">
             <enum name="bottom" value="1"/>
             <enum name="top" value="2"/>
@@ -65,5 +65,22 @@
         <attr name="shape_cutCorner_topRightSize" format="dimension"/>
         <attr name="shape_cutCorner_bottomLeftSize" format="dimension"/>
         <attr name="shape_cutCorner_bottomRightSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DottedEdgesCutCornerView">
+        <attr name="shape_dottedEdgesCutCorner_topLeftSize" format="dimension"/>
+        <attr name="shape_dottedEdgesCutCorner_topRightSize" format="dimension"/>
+        <attr name="shape_dottedEdgesCutCorner_bottomLeftSize" format="dimension"/>
+        <attr name="shape_dottedEdgesCutCorner_bottomRightSize" format="dimension"/>
+        <attr name="shape_edge_position" format="flags">
+            <flag name="none" value="0"/>
+            <flag name="bottom" value="1"/>
+            <flag name="top" value="2"/>
+            <flag name="left" value="4"/>
+            <flag name="right" value="8"/>
+            <flag name="all" value="15"/>
+        </attr>
+        <attr name="shape_dot_radius" format="dimension"/>
+        <attr name="shape_dot_spacing" format="dimension"/>
     </declare-styleable>
 </resources>

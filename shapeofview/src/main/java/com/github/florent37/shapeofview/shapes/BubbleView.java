@@ -4,14 +4,15 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Path;
 import android.graphics.RectF;
-import androidx.annotation.IntDef;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 
 import com.github.florent37.shapeofview.R;
 import com.github.florent37.shapeofview.ShapeOfView;
 import com.github.florent37.shapeofview.manager.ClipPathManager;
+
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class BubbleView extends ShapeOfView {
 
@@ -23,9 +24,9 @@ public class BubbleView extends ShapeOfView {
     @Position
     private int position = POSITION_BOTTOM;
 
-    private int borderRadiusPx;
-    private int arrowHeightPx;
-    private int arrowWidthPx;
+    private float borderRadiusPx;
+    private float arrowHeightPx;
+    private float arrowWidthPx;
 
     public BubbleView(@NonNull Context context) {
         super(context);
@@ -45,10 +46,10 @@ public class BubbleView extends ShapeOfView {
     private void init(Context context, AttributeSet attrs) {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.BubbleView);
-            borderRadiusPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_borderRadius, dpToPx(10));
+            borderRadiusPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_borderRadius, (int) dpToPx(10));
             position = attributes.getInteger(R.styleable.BubbleView_shape_bubble_arrowPosition, position);
-            arrowHeightPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowHeight, dpToPx(10));
-            arrowWidthPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowWidth, dpToPx(10));
+            arrowHeightPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowHeight, (int) dpToPx(10));
+            arrowWidthPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowWidth, (int) dpToPx(10));
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
@@ -74,9 +75,52 @@ public class BubbleView extends ShapeOfView {
         requiresShapeUpdate();
     }
 
-    public void setBorderRadiusPx(int borderRadiusPx) {
-        this.borderRadiusPx = borderRadiusPx;
+    public float getBorderRadius() {
+        return borderRadiusPx;
+    }
+
+    public float getBorderRadiusDp() {
+        return pxToDp(getBorderRadius());
+    }
+
+    public void setBorderRadius(float borderRadius) {
+        this.borderRadiusPx = borderRadius;
         requiresShapeUpdate();
+    }
+
+    public void setBorderRadiusDp(float borderRadius) {
+        this.borderRadiusPx = dpToPx(borderRadius);
+        requiresShapeUpdate();
+    }
+
+    public float getArrowHeight() {
+        return arrowHeightPx;
+    }
+
+    public float getArrowHeightDp() {
+        return pxToDp(getArrowHeight());
+    }
+
+    public void setArrowHeight(float arrowHeight) {
+        this.arrowHeightPx = arrowHeight;
+        requiresShapeUpdate();
+    }
+
+    public void setArrowHeightDp(float arrowHeight) {
+        setArrowHeight(dpToPx(arrowHeight));
+    }
+
+    public float getArrowWidth() {
+        return arrowWidthPx;
+    }
+
+    public void setArrowWidth(float arrowWidth) {
+        this.arrowWidthPx = arrowWidth;
+        requiresShapeUpdate();
+    }
+
+    public void setArrowWidthDp(float arrowWidth) {
+        setArrowWidth(dpToPx(arrowWidth));
     }
 
     private Path drawBubble(RectF myRect, float topLeftDiameter, float topRightDiameter, float bottomRightDiameter, float bottomLeftDiameter) {

@@ -54,4 +54,9 @@ public class ShapeOfViewMainActivity extends AppCompatActivity {
     public void onShapesClicked() {
         startActivity(new Intent(this, ShapeOfViewStarActivity.class));
     }
+
+    @OnClick(R.id.dottedEdges)
+    public void onDottedEdgesClicked() {
+        startActivity(new Intent(this, DottedEdgesActivity.class));
+    }
 }

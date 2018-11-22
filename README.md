@@ -202,6 +202,26 @@ ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 </com.github.florent37.shapeofview.shapes.PolygonView>
 ```
 
+## Dotted Edges with Cut Corners
+
+[![screen](medias/edges_corners.png)](https://www.github.com/florent37/ShapeOfView)
+
+```xml
+ <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+             android:layout_width="100dp"
+             android:layout_height="match_parent"
+             app:shape_dot_radius="3dp"
+             app:shape_dot_spacing="2dp"
+             app:shape_edge_position="right|left"
+             app:shape_dottedEdgesCutCorner_bottomLeftSize="8dp"
+             app:shape_dottedEdgesCutCorner_bottomRightSize="8dp"
+             >
+
+             <!-- YOUR CONTENT -->
+
+ </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+```
+
 ## Animation
 
 All shapes methods can be animated
@@ -289,7 +309,10 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 # HISTORY
 
-**1.4.1** Removed ArcView's ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
+**1.4.5** Removed ArcView's ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
+
+
+**1.4.1** Added Dotted Edge, thanks to @khunzohn
 
 **1.4.0** Support AndroidX
 
