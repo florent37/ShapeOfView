@@ -119,13 +119,14 @@ ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/diagonal.png)](https://www.github.com/florent37/ShapeOfView)
 
+DiagonalView's Direction : if diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIGHT
+
 ```xml
 <com.github.florent37.shapeofview.shapes.DiagonalView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
         app:shape_diagonal_angle="10"
-        app:shape_diagonal_direction="left"
         app:shape_diagonal_position="bottom">
 
          <!-- YOUR CONTENT -->
@@ -308,6 +309,8 @@ Then make a `merge-request` after updated the README with a sample of your shape
 # TODO
 
 # HISTORY
+
+**1.4.5** Removed DiagonalView's Direction : if diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIGHT
 
 **1.4.5** Removed ArcView's ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 

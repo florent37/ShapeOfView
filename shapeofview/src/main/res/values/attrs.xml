@@ -26,10 +26,6 @@
             <enum name="left" value="3"/>
             <enum name="right" value="4"/>
         </attr>
-        <attr name="shape_diagonal_direction" format="enum">
-            <enum name="left" value="1"/>
-            <enum name="right" value="2"/>
-        </attr>
     </declare-styleable>
     <declare-styleable name="ArcView">
         <attr name="shape_arc_height" format="dimension"/>

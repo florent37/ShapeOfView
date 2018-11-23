@@ -29,7 +29,6 @@ public class DiagonalView extends ShapeOfView {
 
     @DiagonalPosition
     private int diagonalPosition = POSITION_TOP;
-    private int diagonalDirection = POSITION_TOP;
     private float diagonalAngle = 0f;
 
     public DiagonalView(@NonNull Context context) {
@@ -51,7 +50,6 @@ public class DiagonalView extends ShapeOfView {
         if (attrs != null) {
             final TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.DiagonalView);
             diagonalAngle = attributes.getFloat(R.styleable.DiagonalView_shape_diagonal_angle, diagonalAngle);
-            diagonalDirection = attributes.getInteger(R.styleable.DiagonalView_shape_diagonal_direction, diagonalDirection);
             diagonalPosition = attributes.getInteger(R.styleable.DiagonalView_shape_diagonal_position, diagonalPosition);
             attributes.recycle();
         }
@@ -60,9 +58,10 @@ public class DiagonalView extends ShapeOfView {
             public Path createClipPath(int width, int height) {
                 final Path path = new Path();
 
-                final float perpendicularHeight = (float) (width * Math.tan(Math.toRadians(diagonalAngle)));
-                final boolean isDirectionLeft = diagonalDirection == DIRECTION_LEFT;
-                
+                final float diagonalAngleAbs = Math.abs(diagonalAngle);
+                final boolean isDirectionLeft = getDiagonalDirection() == DIRECTION_LEFT;
+                final float perpendicularHeight = (float) (width * Math.tan(Math.toRadians(diagonalAngleAbs)));
+
                 switch (diagonalPosition) {
                     case POSITION_BOTTOM:
                         if (isDirectionLeft) {
@@ -144,13 +143,9 @@ public class DiagonalView extends ShapeOfView {
         return diagonalPosition;
     }
 
+    @DiagonalDirection
     public int getDiagonalDirection() {
-        return diagonalDirection;
-    }
-
-    public void setDiagonalDirection(int diagonalDirection) {
-        this.diagonalDirection = diagonalDirection;
-        requiresShapeUpdate();
+        return diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
     }
 
     public float getDiagonalAngle() {

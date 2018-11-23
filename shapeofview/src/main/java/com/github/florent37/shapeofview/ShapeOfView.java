@@ -211,7 +211,7 @@ public class ShapeOfView extends FrameLayout {
         return new ViewOutlineProvider() {
             @Override
             public void getOutline(View view, Outline outline) {
-                if (clipManager != null) {
+                if (clipManager != null && !isInEditMode()) {
                     final Path shadowConvexPath = clipManager.getShadowConvexPath();
                     if (shadowConvexPath != null) {
                         try {
