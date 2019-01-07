@@ -9,14 +9,12 @@
     <com.github.florent37.shapeofview.shapes.DiagonalView
         android:id="@+id/diagonalLayout"
         app:shape_diagonal_angle="10"
-        app:shape_diagonal_direction="left"
         app:shape_diagonal_position="bottom"
         android:layout_width="match_parent"
         android:layout_height="266dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:elevation="0dp"
         android:paddingBottom="16dp">
 
         <com.flaviofaria.kenburnsview.KenBurnsView
@@ -73,7 +71,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="190dp"
-        android:elevation="15dp">
+        >
 
         <ImageView
             android:layout_width="match_parent"

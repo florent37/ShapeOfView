@@ -120,52 +120,56 @@ public class RoundRectView extends ShapeOfView {
         final float bottom = rect.bottom;
         final float right = rect.right;
 
-        final float minSize = Math.min(rect.width() / 2f, rect.height() / 2f);
+        final float maxSize = Math.min(rect.width() / 2f, rect.height() / 2f);
 
-        topLeftRadius = topLeftRadius < 0 ? 0 : topLeftRadius;
-        topRightRadius = topRightRadius < 0 ? 0 : topRightRadius;
-        bottomLeftRadius = bottomLeftRadius < 0 ? 0 : bottomLeftRadius;
-        bottomRightRadius = bottomRightRadius < 0 ? 0 : bottomRightRadius;
+        float topLeftRadiusAbs = Math.abs(topLeftRadius);
+        float topRightRadiusAbs = Math.abs(topRightRadius);
+        float bottomLeftRadiusAbs = Math.abs(bottomLeftRadius);
+        float bottomRightRadiusAbs = Math.abs(bottomRightRadius);
 
-        if (topLeftRadius > minSize) {
-            topLeftRadius = minSize;
+        if (topLeftRadiusAbs > maxSize) {
+            topLeftRadiusAbs = maxSize;
         }
-        if (topRightRadius > minSize) {
-            topRightRadius = minSize;
+        if (topRightRadiusAbs > maxSize) {
+            topRightRadiusAbs = maxSize;
         }
-        if (bottomLeftRadius > minSize) {
-            bottomLeftRadius = minSize;
+        if (bottomLeftRadiusAbs > maxSize) {
+            bottomLeftRadiusAbs = maxSize;
         }
-        if (bottomRightRadius > minSize) {
-            bottomRightRadius = minSize;
+        if (bottomRightRadiusAbs > maxSize) {
+            bottomRightRadiusAbs = maxSize;
         }
 
-        path.moveTo(left + topLeftRadius, top);
-        path.lineTo(right - topRightRadius, top);
+        path.moveTo(left + topLeftRadiusAbs, top);
+        path.lineTo(right - topRightRadiusAbs, top);
 
         //float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean forceMoveTo
         if (useBezier) {
-            path.quadTo(right, top, right, top + topRightRadius);
+            path.quadTo(right, top, right, top + topRightRadiusAbs);
         } else {
-            path.arcTo(new RectF(right - topRightRadius * 2f, top, right, top + topRightRadius * 2f), -90, 90);
+            final float arc = topRightRadius > 0 ? 90 : -270;
+            path.arcTo(new RectF(right - topRightRadiusAbs * 2f, top, right, top + topRightRadiusAbs * 2f), -90, arc);
         }
-        path.lineTo(right, bottom - bottomRightRadius);
+        path.lineTo(right, bottom - bottomRightRadiusAbs);
         if (useBezier) {
-            path.quadTo(right, bottom, right - bottomRightRadius, bottom);
+            path.quadTo(right, bottom, right - bottomRightRadiusAbs, bottom);
         } else {
-            path.arcTo(new RectF(right - bottomRightRadius * 2f, bottom - bottomRightRadius * 2f, right, bottom), 0, 90);
+            final float arc = bottomRightRadiusAbs > 0 ? 90 : -270;
+            path.arcTo(new RectF(right - bottomRightRadiusAbs * 2f, bottom - bottomRightRadiusAbs * 2f, right, bottom), 0, arc);
         }
-        path.lineTo(left + bottomLeftRadius, bottom);
+        path.lineTo(left + bottomLeftRadiusAbs, bottom);
         if (useBezier) {
-            path.quadTo(left, bottom, left, bottom - bottomLeftRadius);
+            path.quadTo(left, bottom, left, bottom - bottomLeftRadiusAbs);
         } else {
-            path.arcTo(new RectF(left, bottom - bottomLeftRadius * 2f, left + bottomLeftRadius * 2f, bottom), 90, 90);
+            final float arc = bottomLeftRadiusAbs > 0 ? 90 : -270;
+            path.arcTo(new RectF(left, bottom - bottomLeftRadiusAbs * 2f, left + bottomLeftRadiusAbs * 2f, bottom), 90, arc);
         }
-        path.lineTo(left, top + topLeftRadius);
+        path.lineTo(left, top + topLeftRadiusAbs);
         if (useBezier) {
-            path.quadTo(left, top, left + topLeftRadius, top);
+            path.quadTo(left, top, left + topLeftRadiusAbs, top);
         } else {
-            path.arcTo(new RectF(left, top, left + topLeftRadius * 2f, top + topLeftRadius * 2f), 180, 90);
+            final float arc = topLeftRadiusAbs > 0 ? 90 : -270;
+            path.arcTo(new RectF(left, top, left + topLeftRadiusAbs * 2f, top + topLeftRadiusAbs * 2f), 180, arc);
         }
         path.close();
 

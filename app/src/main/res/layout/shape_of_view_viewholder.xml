@@ -28,7 +28,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:shape_diagonal_angle="30"
-                app:shape_diagonal_direction="right"
                 app:shape_diagonal_position="right">
 
                 <ImageView

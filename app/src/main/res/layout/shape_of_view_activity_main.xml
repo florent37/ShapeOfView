@@ -156,6 +156,28 @@
             </com.github.florent37.shapeofview.shapes.CutCornerView>
 
             <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/star_wars_animated"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                app:shape_cutCorner_bottomLeftSize="16dp"
+                app:shape_cutCorner_bottomRightSize="16dp"
+                app:shape_cutCorner_topLeftSize="16dp"
+                app:shape_cutCorner_topRightSize="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Star Wars Animated"
+                    android:textColor="@android:color/white" />
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/round"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
