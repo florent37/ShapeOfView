@@ -45,6 +45,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:orientation="vertical"
+            android:clipToPadding="false"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
