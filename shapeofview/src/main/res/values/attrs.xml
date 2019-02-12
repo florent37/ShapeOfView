@@ -46,6 +46,7 @@
             <enum name="left" value="3"/>
             <enum name="right" value="4"/>
         </attr>
+        <attr name="arrow_posititon_percent" format="float"/>
     </declare-styleable>
     <declare-styleable name="RoundRectView">
         <attr name="shape_roundRect_topLeftRadius" format="dimension"/>
