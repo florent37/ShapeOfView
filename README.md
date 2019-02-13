@@ -165,6 +165,7 @@ DiagonalView's Direction : if diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIG
         app:shape_bubble_arrowWidth="10dp"
         app:shape_bubble_arrowPosition="bottom"
         app:shape_bubble_borderRadius="20dp"
+        app:arrow_posititon_percent="0.5"
         >
 
          <!-- YOUR CONTENT -->

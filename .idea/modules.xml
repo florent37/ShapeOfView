@@ -5,7 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/ShapeOfView.iml" filepath="$PROJECT_DIR$/ShapeOfView.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShapeOfYou.iml" filepath="$PROJECT_DIR$/ShapeOfYou.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/shapeofview.iml" filepath="$PROJECT_DIR$/.idea/shapeofview.iml" />
       <module fileurl="file://$PROJECT_DIR$/shapeofview/shapeofview.iml" filepath="$PROJECT_DIR$/shapeofview/shapeofview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shapeofview/shapeofview-shapeofview.iml" filepath="$PROJECT_DIR$/shapeofview/shapeofview-shapeofview.iml" />
     </modules>
   </component>
 </project>

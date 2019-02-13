@@ -17,6 +17,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginBottom="8dp"
+            app:arrow_posititon_percent="0.75"
             android:elevation="6dp"
 
             app:shape_bubble_arrowHeight="10dp"

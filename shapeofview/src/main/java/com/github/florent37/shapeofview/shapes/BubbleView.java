@@ -28,6 +28,9 @@ public class BubbleView extends ShapeOfView {
     private float arrowHeightPx;
     private float arrowWidthPx;
 
+    private float defPositionPer=0.5f;
+    private float positionPer;
+
     public BubbleView(@NonNull Context context) {
         super(context);
         init(context, null);
@@ -50,6 +53,7 @@ public class BubbleView extends ShapeOfView {
             position = attributes.getInteger(R.styleable.BubbleView_shape_bubble_arrowPosition, position);
             arrowHeightPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowHeight, (int) dpToPx(10));
             arrowWidthPx = attributes.getDimensionPixelSize(R.styleable.BubbleView_shape_bubble_arrowWidth, (int) dpToPx(10));
+            positionPer=attributes.getFloat(R.styleable.BubbleView_arrow_posititon_percent,defPositionPer);
             attributes.recycle();
         }
         super.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
@@ -123,6 +127,12 @@ public class BubbleView extends ShapeOfView {
         setArrowWidth(dpToPx(arrowWidth));
     }
 
+
+    public void setPositionPer(float positionPer) {
+        this.positionPer = positionPer;
+        requiresShapeUpdate();
+    }
+
     private Path drawBubble(RectF myRect, float topLeftDiameter, float topRightDiameter, float bottomRightDiameter, float bottomLeftDiameter) {
         final Path path = new Path();
 
@@ -141,7 +151,7 @@ public class BubbleView extends ShapeOfView {
         final float right = myRect.right - spacingRight;
         final float bottom = myRect.bottom - spacingBottom;
 
-        final float centerX = myRect.centerX();
+        final float centerX = (myRect.left + myRect.right) * positionPer;
 
         path.moveTo(left + topLeftDiameter / 2f, top);
         //LEFT, TOP
@@ -157,9 +167,9 @@ public class BubbleView extends ShapeOfView {
         //RIGHT, TOP
 
         if (position == POSITION_RIGHT) {
-            path.lineTo(right, bottom / 2f - arrowWidthPx);
-            path.lineTo(myRect.right, bottom / 2f);
-            path.lineTo(right, bottom / 2f + arrowWidthPx);
+            path.lineTo(right, bottom-(bottom*(1-positionPer))- arrowWidthPx);
+            path.lineTo(myRect.right, bottom-(bottom*(1-positionPer)));
+            path.lineTo(right, bottom-(bottom*(1-positionPer)) + arrowWidthPx);
         }
         path.lineTo(right, bottom - bottomRightDiameter / 2);
 
@@ -177,9 +187,9 @@ public class BubbleView extends ShapeOfView {
         //LEFT, BOTTOM
 
         if (position == POSITION_LEFT) {
-            path.lineTo(left, bottom / 2f + arrowWidthPx);
-            path.lineTo(myRect.left, bottom / 2f);
-            path.lineTo(left, bottom / 2f - arrowWidthPx);
+            path.lineTo(left, bottom-(bottom*(1-positionPer))+ arrowWidthPx);
+            path.lineTo(myRect.left, bottom-(bottom*(1-positionPer)));
+            path.lineTo(left, bottom-(bottom*(1-positionPer)) - arrowWidthPx);
         }
         path.lineTo(left, top + topLeftDiameter / 2);
 
