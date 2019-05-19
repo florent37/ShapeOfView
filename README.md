@@ -103,13 +103,12 @@ ShapesOfView came with pre-created shapes :
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/arc.png)](https://www.github.com/florent37/ShapeOfView)
 
-ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
-
 ```xml
 <com.github.florent37.shapeofview.shapes.ArcView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
+        app:shape_arc_cropDirection="outside"
         app:shape_arc_height="20dp"
         app:shape_arc_position="bottom"
         >
@@ -124,7 +123,6 @@ ArcDirection : CROP_OUTSIDE if arcHeight > 0, CROP_INSIDE if arcHeight < 0
 
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/diagonal.png)](https://www.github.com/florent37/ShapeOfView)
 
-DiagonalView's Direction : if diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIGHT
 
 ```xml
 <com.github.florent37.shapeofview.shapes.DiagonalView
@@ -132,6 +130,7 @@ DiagonalView's Direction : if diagonalAngle > 0 ? DIRECTION_LEFT : DIRECTION_RIG
         android:layout_height="100dp"
         android:elevation="4dp"
         app:shape_diagonal_angle="10"
+        app:shape_diagonal_direction="right" 
         app:shape_diagonal_position="bottom">
 
          <!-- YOUR CONTENT -->
