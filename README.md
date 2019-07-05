@@ -38,7 +38,15 @@ What you can do with Shape Of View :
 
 # Use implemented shapes
 
-ShapesOfView came with pre-created shapes :
+ShapeOfView **disable** the `background` property of your view, 
+please specify a child with a background to enable it 
+```xml
+<com.github.florent37.shapeofview.shapes.CircleView
+   <FrameLayout
+      android:background="@color/blue"
+```
+
+ShapeOfView came with pre-created shapes :
 
 ## Circle
 
@@ -304,6 +312,7 @@ shapeOfView.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
 });
 ```
 
+In some case you have to specify `requiresBitmap = true` to enable ShapeOfView to draw the shape inside a bitmap before clipping your view. It will be less efficient but can make your custom shape work.
 
 # Contribute
 
