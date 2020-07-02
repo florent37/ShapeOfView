@@ -360,7 +360,7 @@ Then make a `merge-request` after updated the README with a sample of your shape
 
 Ed Sheeran, for the name of this project and his awesome songs <3
 
-Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
+Author: Florent Champigny 
 
 Blog : [http://www.tutos-android-france.com/](http://www.tutos-android-france.com/)
 
