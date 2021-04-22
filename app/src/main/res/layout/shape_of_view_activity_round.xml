@@ -9,9 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+        tools:context="com.github.florent37.shapeofview.sample.io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
-        <com.github.florent37.shapeofview.shapes.ArcView
+        <io.github.florent37.shapeofview.shapes.ArcView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="8dp"
@@ -25,9 +25,9 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/shape_of_view" />
 
-        </com.github.florent37.shapeofview.shapes.ArcView>
+        </io.github.florent37.shapeofview.shapes.ArcView>
 
-        <com.github.florent37.shapeofview.shapes.CircleView
+        <io.github.florent37.shapeofview.shapes.CircleView
             android:id="@+id/circle"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -58,7 +58,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.CircleView>
+        </io.github.florent37.shapeofview.shapes.CircleView>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -9,6 +9,17 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
@@ -17,31 +28,4 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
 }
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'shapeofview'
-    orgName = 'florent37'
-
-    publishedGroupId = 'com.github.florent37'
-    libraryName = 'ShapeOfView'
-    artifact = 'shapeofview'
-
-    libraryDescription = 'ShapeOfView'
-
-    siteUrl = 'https://github.com/florent37/ShapeOfView'
-    gitUrl = 'https://github.com/florent37/ShapeOfView.git'
-
-    libraryVersion = rootProject.ext.libraryVersion
-
-    developerId = 'florent37'
-    developerName = 'florent37'
-    developerEmail = 'champigny.florent@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
-
-apply from: rootProject.file('gradle/install-v1.gradle')
-apply from: rootProject.file('gradle/bintray-android-v1.gradle')
+apply from: rootProject.file('gradle/publish-mavencentral.gradle')

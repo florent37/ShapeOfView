@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         android:alpha="0.3"
         android:src="#000000" />
 
-    <com.github.florent37.shapeofview.shapes.StarView
+    <io.github.florent37.shapeofview.shapes.StarView
         android:layout_width="240dp"
         android:layout_height="240dp"
         android:layout_gravity="center"
@@ -35,6 +35,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/captain_bk" />
 
-    </com.github.florent37.shapeofview.shapes.StarView>
+    </io.github.florent37.shapeofview.shapes.StarView>
 
 </FrameLayout>

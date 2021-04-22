@@ -1,0 +1,94 @@
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = rootProject.groupId
+                artifactId = rootProject.artifactId
+                version = rootProject.libraryVersion
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = rootProject.groupId
+                artifactId = rootProject.artifactId
+                version = rootProject.libraryVersion
+            }
+        }
+    }
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                beforeDeployment {  deployment -> signing.signPom(deployment) }
+
+                repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                    authentication(userName: ossrhUsername, password: ossrhPassword)
+                }
+
+                snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+                    authentication(userName: ossrhUsername, password: ossrhPassword)
+                }
+
+                pom.project {
+                    name 'ShapeOfView'
+                    packaging 'aar'
+                    // optionally artifactId can be defined here
+                    description 'Give a custom shape to any android view Useful for Material Design 2'
+                    url 'https://github.com/florent37/ShapeOfView'
+
+                    groupId = rootProject.groupId
+                    artifactId = rootProject.artifactId
+                    version = rootProject.libraryVersion
+
+                    scm {
+                        connection 'scm:git:https://github.com/florent37/ShapeOfView'
+                        developerConnection 'scm:git:https://github.com/florent37/ShapeOfView'
+                        url 'https://github.com/florent37/ShapeOfView'
+                    }
+
+                    licenses {
+                        license {
+                            name 'The Apache License, Version 2.0'
+                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id 'florent.champigny'
+                            name 'Florent Champigny'
+                            email 'champigny.florent@gmail.com'
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    signing {
+        required { gradle.taskGraph.hasTask("uploadArchives") }
+        sign configurations.archives
+    }
+
+    artifacts {
+        archives androidSourcesJar
+    }
+}

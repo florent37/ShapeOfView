@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ShapeOfView.iml" filepath="$PROJECT_DIR$/ShapeOfView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/ShapeOfView-app.iml" filepath="$PROJECT_DIR$/app/ShapeOfView-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shapeofview/ShapeOfView-shapeofview.iml" filepath="$PROJECT_DIR$/shapeofview/ShapeOfView-shapeofview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ShapeOfYou.iml" filepath="$PROJECT_DIR$/ShapeOfYou.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android-ShapeOfView.iml" filepath="$PROJECT_DIR$/android-ShapeOfView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shapeofview/android-ShapeOfView-shapeofview.iml" filepath="$PROJECT_DIR$/shapeofview/android-ShapeOfView-shapeofview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/shapeofview.iml" filepath="$PROJECT_DIR$/.idea/shapeofview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ShapeOfView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ShapeOfView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shapeofview/ShapeOfView.shapeofview.iml" filepath="$PROJECT_DIR$/.idea/modules/shapeofview/ShapeOfView.shapeofview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.ShapeOfView.iml" filepath="$PROJECT_DIR$/.idea/modules/android.ShapeOfView.iml" />
     </modules>
   </component>
 </project>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/shape_of_view_shrineColor"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
 
     <ImageView
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toEndOf="@+id/menu"
         app:layout_constraintTop_toTopOf="@+id/menu" />
 
-    <com.github.florent37.shapeofview.shapes.CutCornerView
+    <io.github.florent37.shapeofview.shapes.CutCornerView
         android:id="@+id/middleSheet"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -137,9 +137,9 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
+    </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-    <com.github.florent37.shapeofview.shapes.CutCornerView
+    <io.github.florent37.shapeofview.shapes.CutCornerView
         android:id="@+id/topSheet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
 
         </FrameLayout>
 
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
+    </io.github.florent37.shapeofview.shapes.CutCornerView>
 
     <ImageView
         android:id="@+id/imageView11"
@@ -178,7 +178,7 @@
         app:layout_constraintTop_toTopOf="@+id/menu"
         app:srcCompat="@drawable/shape_of_view_ic_search_black_24dp" />
 
-    <com.github.florent37.shapeofview.shapes.CutCornerView
+    <io.github.florent37.shapeofview.shapes.CutCornerView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -227,6 +227,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.github.florent37.shapeofview.shapes.CutCornerView>
+    </io.github.florent37.shapeofview.shapes.CutCornerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout >

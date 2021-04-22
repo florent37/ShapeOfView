@@ -15,7 +15,7 @@
         android:orientation="vertical"
         >
 
-        <com.github.florent37.shapeofview.shapes.ArcView
+        <io.github.florent37.shapeofview.shapes.ArcView
             android:id="@+id/diagonalLayout"
             android:layout_width="match_parent"
             android:layout_height="380dp"
@@ -50,7 +50,7 @@
 
             </FrameLayout>
 
-        </com.github.florent37.shapeofview.shapes.ArcView>
+        </io.github.florent37.shapeofview.shapes.ArcView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"

@@ -10,9 +10,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+        tools:context="com.github.florent37.shapeofview.sample.io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
-        <com.github.florent37.shapeofview.shapes.BubbleView
+        <io.github.florent37.shapeofview.shapes.BubbleView
             android:id="@+id/heart"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -45,9 +45,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.BubbleView>
+        </io.github.florent37.shapeofview.shapes.BubbleView>
 
-        <com.github.florent37.shapeofview.ShapeOfView
+        <io.github.florent37.shapeofview.ShapeOfView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginBottom="8dp"
@@ -76,9 +76,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.ShapeOfView>
+        </io.github.florent37.shapeofview.ShapeOfView>
 
-        <com.github.florent37.shapeofview.shapes.CircleView
+        <io.github.florent37.shapeofview.shapes.CircleView
             android:id="@+id/circle"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -108,9 +108,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.CircleView>
+        </io.github.florent37.shapeofview.shapes.CircleView>
 
-        <com.github.florent37.shapeofview.shapes.DiagonalView
+        <io.github.florent37.shapeofview.shapes.DiagonalView
             android:id="@+id/diagonal"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -135,9 +135,9 @@
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />>
 
-        </com.github.florent37.shapeofview.shapes.DiagonalView>
+        </io.github.florent37.shapeofview.shapes.DiagonalView>
 
-        <com.github.florent37.shapeofview.shapes.ArcView
+        <io.github.florent37.shapeofview.shapes.ArcView
             android:id="@+id/arc"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -167,9 +167,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.ArcView>
+        </io.github.florent37.shapeofview.shapes.ArcView>
 
-        <com.github.florent37.shapeofview.shapes.StarView
+        <io.github.florent37.shapeofview.shapes.StarView
             android:id="@+id/star"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -198,9 +198,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.StarView>
+        </io.github.florent37.shapeofview.shapes.StarView>
 
-        <com.github.florent37.shapeofview.shapes.RoundRectView
+        <io.github.florent37.shapeofview.shapes.RoundRectView
             android:id="@+id/roundRect"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -236,9 +236,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.RoundRectView>
+        </io.github.florent37.shapeofview.shapes.RoundRectView>
 
-        <com.github.florent37.shapeofview.shapes.CutCornerView
+        <io.github.florent37.shapeofview.shapes.CutCornerView
             android:id="@+id/clipCorner"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -275,9 +275,9 @@
                 android:text="Work with all views"
                 android:textColor="@android:color/white" />
 
-        </com.github.florent37.shapeofview.shapes.CutCornerView>
+        </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-        <com.github.florent37.shapeofview.shapes.PolygonView
+        <io.github.florent37.shapeofview.shapes.PolygonView
             android:id="@+id/polygonView"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -306,7 +306,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
-        </com.github.florent37.shapeofview.shapes.PolygonView>
+        </io.github.florent37.shapeofview.shapes.PolygonView>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

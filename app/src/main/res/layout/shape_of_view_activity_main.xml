@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
+    tools:context="com.github.florent37.shapeofview.sample.io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,7 +19,7 @@
         app:title="@string/app_name"
         app:titleTextColor="@android:color/white" />
 
-    <com.github.florent37.shapeofview.shapes.TriangleView
+    <io.github.florent37.shapeofview.shapes.TriangleView
         android:id="@+id/triangle"
         android:layout_width="30dp"
         android:layout_height="15dp"
@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:background="@color/colorPrimary" />
 
-    </com.github.florent37.shapeofview.shapes.TriangleView>
+    </io.github.florent37.shapeofview.shapes.TriangleView>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             android:paddingRight="16dp">
 
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/shapes"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -69,9 +69,9 @@
                     android:text="Shapes"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/shrine"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -90,9 +90,9 @@
                     android:text="Shrine"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/anim"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -111,9 +111,9 @@
                     android:text="Animation"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/jackman"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -132,9 +132,9 @@
                     android:text="Jackman"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/star_wars"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -153,9 +153,9 @@
                     android:text="Star Wars"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/star_wars_animated"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -174,10 +174,10 @@
                     android:text="Star Wars Animated"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/round"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -196,10 +196,10 @@
                     android:text="Ed Sheeran"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/star"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -218,9 +218,9 @@
                     android:text="Star"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
-            <com.github.florent37.shapeofview.shapes.CutCornerView
+            <io.github.florent37.shapeofview.shapes.CutCornerView
                 android:id="@+id/dottedEdges"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -240,7 +240,7 @@
                     android:text="Dotted Edges with Cut Corners"
                     android:textColor="@android:color/white" />
 
-            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            </io.github.florent37.shapeofview.shapes.CutCornerView>
 
 
         </LinearLayout>

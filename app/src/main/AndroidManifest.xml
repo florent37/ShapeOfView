@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.florent37.shapeofview.sample">
+    package="io.github.florent37.shapeofview.sample">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShapeOfViewMainActivity">
+        <activity android:name="io.github.florent37.shapeofview.sample.ShapeOfViewMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,21 +17,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ShapeOfViewAnimationActivity"/>
-        <activity android:name=".ShapeOfViewStarActivity"/>
-        <activity android:name=".MaterialDesignShrineActivity"/>
-        <activity android:name=".ErrorActivity" >
+        <activity android:name="io.github.florent37.shapeofview.sample.ShapeOfViewAnimationActivity"/>
+        <activity android:name="io.github.florent37.shapeofview.sample.ShapeOfViewStarActivity"/>
+        <activity android:name="io.github.florent37.shapeofview.sample.MaterialDesignShrineActivity"/>
+        <activity android:name="io.github.florent37.shapeofview.sample.ErrorActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JackmanActivity" />
-        <activity android:name=".StarWarsActivity" />
-        <activity android:name=".ShapeOfViewRoundActivity" />
-        <activity android:name=".DottedEdgesActivity" />
-        <activity android:name=".ShapeOfViewStarAnimatedActivity" />
+        <activity android:name="io.github.florent37.shapeofview.sample.JackmanActivity" />
+        <activity android:name="io.github.florent37.shapeofview.sample.StarWarsActivity" />
+        <activity android:name="io.github.florent37.shapeofview.sample.ShapeOfViewRoundActivity" />
+        <activity android:name="io.github.florent37.shapeofview.sample.DottedEdgesActivity" />
+        <activity android:name="io.github.florent37.shapeofview.sample.ShapeOfViewStarAnimatedActivity" />
 
     </application>
 

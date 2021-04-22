@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#AAA">
 
-    <com.github.florent37.shapeofview.shapes.DiagonalView
+    <io.github.florent37.shapeofview.shapes.DiagonalView
         android:id="@+id/diagonalLayout"
         app:shape_diagonal_angle="10"
         app:shape_diagonal_position="bottom"
@@ -63,9 +63,9 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-    </com.github.florent37.shapeofview.shapes.DiagonalView>
+    </io.github.florent37.shapeofview.shapes.DiagonalView>
 
-    <com.github.florent37.shapeofview.shapes.CircleView
+    <io.github.florent37.shapeofview.shapes.CircleView
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -78,7 +78,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/diagonallayout_circle"
             android:src="@drawable/diagonallayout_hughjackman" />
-    </com.github.florent37.shapeofview.shapes.CircleView>
+    </io.github.florent37.shapeofview.shapes.CircleView>
 
     <LinearLayout
         android:layout_width="match_parent"
