@@ -19,14 +19,10 @@ Useful for Material Design 2
 
 [ ![Download](https://api.bintray.com/packages/florent37/maven/shapeofview/images/download.svg) ](https://bintray.com/florent37/maven/shapeofview/)
 ```java
-//requires with AndroidX
-dependencies {
-    implementation 'com.github.florent37:shapeofview:(lastest version)'
-}
+//using maven central
 
-//to use before AndroidX
 dependencies {
-    implementation 'com.github.florent37:shapeofview:1.3.2'
+    implementation 'io.github.florent37:shapeofview:1.4.7'
 }
 ```
 
