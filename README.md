@@ -13,6 +13,10 @@ Useful for Material Design 2
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
 
+*Breaking change*
+
+the old package `com.github.florent37` has been replaced by `io.github.florent37`
+
 # Download
 
 <a href='https://ko-fi.com/A160LCC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
@@ -37,7 +41,7 @@ What you can do with Shape Of View :
 ShapeOfView **disable** the `background` property of your view, 
 please specify a child with a background to enable it 
 ```xml
-<com.github.florent37.shapeofview.shapes.CircleView
+<io.github.florent37.shapeofview.shapes.CircleView
    <FrameLayout
       android:background="@color/blue"
 ```
@@ -49,7 +53,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/circle.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.CircleView
+<io.github.florent37.shapeofview.shapes.CircleView
         android:layout_width="150dp"
         android:layout_height="150dp"
 
@@ -59,7 +63,7 @@ ShapeOfView came with pre-created shapes :
 
             <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.CircleView>
+</io.github.florent37.shapeofview.shapes.CircleView>
 ```
 
 ## RoundRect
@@ -67,7 +71,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/roundrect.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.RoundRectView
+<io.github.florent37.shapeofview.shapes.RoundRectView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
@@ -83,7 +87,7 @@ ShapeOfView came with pre-created shapes :
 
             <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.RoundRectView>
+</io.github.florent37.shapeofview.shapes.RoundRectView>
 ```
 
 ## ClipCorner
@@ -91,7 +95,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/cut_corner.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.CutCornerView
+<io.github.florent37.shapeofview.shapes.CutCornerView
         android:id="@+id/clipCorner"
         android:layout_width="150dp"
         android:layout_height="100dp"
@@ -100,7 +104,7 @@ ShapeOfView came with pre-created shapes :
 
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.CutCornerView>
+</io.github.florent37.shapeofview.shapes.CutCornerView>
 ```
 
 ## Arc
@@ -108,7 +112,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/arc.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.ArcView
+<io.github.florent37.shapeofview.shapes.ArcView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
@@ -119,7 +123,7 @@ ShapeOfView came with pre-created shapes :
 
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.ArcView>
+</io.github.florent37.shapeofview.shapes.ArcView>
 ```
 
 
@@ -129,7 +133,7 @@ ShapeOfView came with pre-created shapes :
 
 
 ```xml
-<com.github.florent37.shapeofview.shapes.DiagonalView
+<io.github.florent37.shapeofview.shapes.DiagonalView
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
@@ -139,7 +143,7 @@ ShapeOfView came with pre-created shapes :
 
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.DiagonalView>
+</io.github.florent37.shapeofview.shapes.DiagonalView>
 ```
 
 ## Triangle
@@ -147,7 +151,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/triangle.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.TriangleView
+<io.github.florent37.shapeofview.shapes.TriangleView
          android:layout_width="150dp"
          android:layout_height="150dp"
          android:elevation="4dp"
@@ -158,7 +162,7 @@ ShapeOfView came with pre-created shapes :
 
             <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.TriangleView>
+</io.github.florent37.shapeofview.shapes.TriangleView>
 ```
 
 ## Bubble
@@ -166,7 +170,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/bubble.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.BubbleView
+<io.github.florent37.shapeofview.shapes.BubbleView
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:shape_bubble_arrowHeight="10dp"
@@ -178,7 +182,7 @@ ShapeOfView came with pre-created shapes :
 
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.BubbleView>
+</io.github.florent37.shapeofview.shapes.BubbleView>
 ```
 
 ## Star
@@ -187,14 +191,14 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/star_11_pointed.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.shapes.StarView
+<io.github.florent37.shapeofview.shapes.StarView
         android:layout_width="150dp"
         android:layout_height="150dp"
         app:shape_star_noOfPoints="5">
 
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.StarView>
+</io.github.florent37.shapeofview.shapes.StarView>
 ```
 
 ## Polygon
@@ -202,14 +206,14 @@ ShapeOfView came with pre-created shapes :
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/polygon.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
- <com.github.florent37.shapeofview.shapes.PolygonView
+ <io.github.florent37.shapeofview.shapes.PolygonView
             android:layout_width="150dp"
             android:layout_height="100dp"
             app:shape_polygon_noOfSides="9"
             >
          <!-- YOUR CONTENT -->
 
-</com.github.florent37.shapeofview.shapes.PolygonView>
+</io.github.florent37.shapeofview.shapes.PolygonView>
 ```
 
 ## Dotted Edges with Cut Corners
@@ -217,7 +221,7 @@ ShapeOfView came with pre-created shapes :
 [![screen](medias/edges_corners.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
- <com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
+ <io.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView
              android:layout_width="100dp"
              android:layout_height="match_parent"
              app:shape_dot_radius="3dp"
@@ -229,7 +233,7 @@ ShapeOfView came with pre-created shapes :
 
              <!-- YOUR CONTENT -->
 
- </com.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
+ </io.github.florent37.shapeofview.shapes.DottedEdgesCutCornerView>
 ```
 
 ## Animation
@@ -258,7 +262,7 @@ You can use custom shape to cut your view
 [![screen](https://raw.githubusercontent.com/florent37/ShapeOfView/master/medias/custom.png)](https://www.github.com/florent37/ShapeOfView)
 
 ```xml
-<com.github.florent37.shapeofview.ShapeOfView
+<io.github.florent37.shapeofview.ShapeOfView
         android:layout_width="100dp"
         android:layout_height="100dp"
 
@@ -267,7 +271,7 @@ You can use custom shape to cut your view
 
     <!-- YOUR CONTENT -->
 
- </com.github.florent37.shapeofview.ShapeOfView>
+ </io.github.florent37.shapeofview.ShapeOfView>
 ```
 
 # Using Path (with elevation)
@@ -277,7 +281,7 @@ This method generates also a **shadow path** (with Lollipop elevation API 21+)
 Wrap your view with a `ShapeOfView`
 
 ```xml
-<com.github.florent37.shapeofview.ShapeOfView
+<io.github.florent37.shapeofview.ShapeOfView
         android:id="@+id/myShape"
         android:layout_width="30dp"
         android:layout_height="15dp"
@@ -285,7 +289,7 @@ Wrap your view with a `ShapeOfView`
 
         <!-- YOUR CONTENT -->
 
- </com.github.florent37.shapeofview.ShapeOfView>
+ </io.github.florent37.shapeofview.ShapeOfView>
 ```
 
 Then generate a path in your code :
